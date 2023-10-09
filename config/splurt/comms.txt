@@ -1,2 +1,0 @@
-## Bot IP:Port for discord notifications
-#BOT_IP 127.0.0.1:8081
