@@ -400,7 +400,7 @@
 // ---------- Code originally from VoreStation ----------
 /obj/item/gun/ballistic/revolver/mws
 	name = "MWS-01 'Big Iron'"
-	desc = "Modular Weapon System-01, does fit on your hip."
+	desc = "Modular Weapon System-01, it has CYBERSUN etched onto the side. This one seems to use an energy module ruled illegal in most areas."
 	icon = 'icons/obj/guns/projectile.dmi'
 	icon_state = "mws"
 	fire_sound = 'sound/weapons/MWSfire.ogg' //i spent 1 hour making a cool sound but byond just compresses it to shit so have this instead >:(

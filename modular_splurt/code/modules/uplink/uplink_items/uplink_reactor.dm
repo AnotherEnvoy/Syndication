@@ -5,4 +5,5 @@
 			Please note: This Rod fissiles much faster than it's regular counterpart, it doesn't take \
 			much to overload the reactor with these..."
 	item = /obj/item/fuel_rod/material/telecrystal
-	cost = 7
+	cost = 20
+	purchasable_from = UPLINK_NUKE_OPS

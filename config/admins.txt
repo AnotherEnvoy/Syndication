@@ -8,4 +8,13 @@
 # NOTE: syntax was changed to allow hyphenation of ranknames, since spaces are stripped.      #
 ###############################################################################################
 
-yourckeygoeshere = Host
+EnvoyIn = Host
+ViperREV = Coremin
+Dreek12 = Coremin
+Cababge = Coremin
+ItzAngel505 = Coremin
+No_Meemz_No_Life = Coremin
+FrankFox31 = Coremin
+L00P = Coremin
+Splashbagg_ = Coremin
+SCTH = Coremin

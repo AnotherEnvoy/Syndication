@@ -2,7 +2,7 @@
 #AUTO_PROFILE
 
 ## Server name: This appears at the top of the screen in-game and in the BYOND hub. Uncomment and replace 'tgstation' with the name of your choice.
-# SERVERNAME tgstation
+SERVERNAME SYNDICATION
 
 ## Community short-name: This appears in parentheses after the server's active station name
 # COMMUNITYSHORTNAME tg???
@@ -12,7 +12,7 @@
 # COMMUNITYLINK http://crouton.net
 
 ## Server tagline: This will appear right below the server's title.
-# SERVERTAGLINE A generic TG-based server
+SERVERTAGLINE A furry ERP offshoot of SPLURT, set in the Syndicate!
 
 ## Use tagline strings: Uncomment to have the server's tagline be randomly selected from taglines.txt
 # USETAGLINESTRINGS
@@ -21,7 +21,7 @@
 # SERVERSQLNAME tgstation
 
 ## Station name: The name of the station as it is referred to in-game. If commented out, the game will generate a random name instead.
-STATIONNAME Space Station 13
+STATIONNAME SYNDICATION 13
 
 ## Put on byond hub: Uncomment this to put your server on the byond hub.
 #HUB
@@ -81,4 +81,4 @@ DISABLE_HIGH_POP_MC_MODE_AMOUNT 60
 ## Disallows roundstart gamemode voting if not null or uncommented
 ## Just input the gamemode lowercase in there, the thing will take a simple string for it
 ## Invalid gamemodes will default extended, have fun.
-#FORCE_GAMEMODE
+FORCE_GAMEMODE extended

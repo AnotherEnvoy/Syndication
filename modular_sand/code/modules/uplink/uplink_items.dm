@@ -10,7 +10,7 @@
 	name = "Additional Arm"
 	desc = "An additional arm harvested from slaves captured by the Syndicate. Comes with an implanter."
 	item = /obj/item/extra_arm
-	cost = 8
+	cost = 20
 
 // Made craftable, and no longer illegal
 /datum/uplink_item/ammo/revolver

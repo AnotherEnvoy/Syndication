@@ -13,9 +13,9 @@
 			from other identification cards. The access is cumulative, so scanning one card does not erase the \
 			access gained from another. In addition, they can be forged to display a new assignment and name. \
 			This can be done an unlimited amount of times. Some Syndicate areas and devices can only be accessed \
-			with these cards."
+			with these cards. Due to them usually only being given to field agents, their price is increased."
 	item = /obj/item/card/id/syndicate
-	cost = 2
+	cost = 20
 
 /datum/uplink_item/stealthy_tools/ai_detector
 	name = "Artificial Intelligence Detector"
@@ -24,14 +24,14 @@
 			an artificial intelligence is watching you is useful for knowing when to maintain cover, and finding nearby \
 			blind spots can help you identify escape routes."
 	item = /obj/item/multitool/ai_detect
-	cost = 1
+	cost = 5
 
 /datum/uplink_item/stealthy_tools/chameleon
 	name = "Chameleon Kit"
 	desc = "A set of items that contain chameleon technology allowing you to disguise as pretty much anything on the station, and more! \
 			Due to budget cuts, the shoes don't provide protection against slipping."
 	item = /obj/item/storage/box/syndie_kit/chameleon
-	cost = 2
+	cost = 5
 	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
 
 /datum/uplink_item/stealthy_tools/chameleon_proj
@@ -39,14 +39,14 @@
 	desc = "Projects an image across a user, disguising them as an object scanned with it, as long as they don't \
 			move the projector from their hand. Disguised users move slowly, and projectiles pass over them."
 	item = /obj/item/chameleon
-	cost = 7
+	cost = 10
 
 /datum/uplink_item/stealthy_tools/codespeak_manual
 	name = "Codespeak Manual"
 	desc = "Syndicate agents can be trained to use a series of codewords to convey complex information, which sounds like random concepts and drinks to anyone listening. \
 			This manual teaches you this Codespeak. You can also hit someone else with the manual in order to teach them. This is the deluxe edition, which has unlimited uses."
 	item = /obj/item/codespeak_manual/unlimited
-	cost = 3
+	cost = 5
 
 /datum/uplink_item/stealthy_tools/combatbananashoes
 	name = "Combat Banana Shoes"
@@ -92,7 +92,7 @@
 	item = /obj/item/reagent_containers/syringe/mulligan
 	cost = 3
 	surplus = 30
-	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
+	purchasable_from = (UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
 
 /datum/uplink_item/stealthy_tools/syndigaloshes
 	name = "No-Slip Chameleon Shoes"
@@ -112,6 +112,7 @@
 	desc = "This device will disrupt any nearby outgoing radio communication when activated. Does not affect binary chat."
 	item = /obj/item/jammer
 	cost = 2
+	purchasable_from = UPLINK_NUKE_OPS
 
 /datum/uplink_item/stealthy_tools/smugglersatchel
 	name = "Smuggler's Satchel"

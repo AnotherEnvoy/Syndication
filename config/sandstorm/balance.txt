@@ -10,9 +10,9 @@
 
 ## What point multiplier should cryptominers use?
 ## Determined by heat level, or uses MAX in cheat mode
-CRYPTO_MULTIPLIER_MIN 0.2
-CRYPTO_MULTIPLIER_MID 1
-CRYPTO_MULTIPLIER_MAX 3
+CRYPTO_MULTIPLIER_MIN 0.1
+CRYPTO_MULTIPLIER_MID 0.5
+CRYPTO_MULTIPLIER_MAX 1.5
 
 ## What heat thresholds should cryptominers use?
 ## This is measured in Kelvins
@@ -22,7 +22,7 @@ CRYPTO_HEAT_THRESHOLD_MAX 500
 
 ## How much heat should cryptominers produce?
 ## This amount is added to the environment on process
-CRYPTO_HEAT_POWER 100
+CRYPTO_HEAT_POWER 120
 
 ## How long between cryptominers producing resources?
 ## Currently unimplemented!
@@ -31,7 +31,7 @@ CRYPTO_MINING_TIME 3000
 ## What material amount should the cryptominers produce?
 ## This is modified by the MULTIPLIER value
 ## Currently unimplemented!
-CRYPTO_PAYOUT_AMOUNT 50
+CRYPTO_PAYOUT_AMOUNT 40
 
 ## How much power should the cryptominer use?
 ## Currently unimplemented!
@@ -45,7 +45,7 @@ CRYPTO_POWER_USE_PROCESS 20
 
 ## How long should the autodoc take to perform surgery?
 ## This is modified by stock part ratings
-AUTODOC_TIME_SURGERY_BASE 350
+AUTODOC_TIME_SURGERY_BASE 50
 
 ###
 ## BLUESPACE MINER
@@ -53,7 +53,7 @@ AUTODOC_TIME_SURGERY_BASE 350
 
 ## How much should the bluespace miner produce, compared to normal?
 ## This is modified by stock part ratings
-BLUESPACEMINER_MULT_OUTPUT 1
+BLUESPACEMINER_MULT_OUTPUT 0.8
 
 ## What is the minimum stock part tier to produce bluespace crystals?
 BLUESPACEMINER_CRYSTAL_TIER 5
@@ -72,11 +72,11 @@ TETRIS_PRIZES_MAX 5
 
 ## How many points required per prize vended
 ## Amount is equal to SCORE divided by TETRIS_REWARD_DIVISOR
-TETRIS_REWARD_DIVISOR 1000
+TETRIS_REWARD_DIVISOR 3000
 
 ## Minimum score required to message admins
 ## This is intended for detecting suspicious scores
-TETRIS_SCORE_HIGH 10000
+TETRIS_SCORE_HIGH 15000
 
 ## Maximum score that can be displayed
 ## Score values past this number are ignored

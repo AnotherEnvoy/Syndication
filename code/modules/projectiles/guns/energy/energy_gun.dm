@@ -47,10 +47,10 @@
 	icon_state = "decloner"
 
 /obj/item/gun/energy/e_gun/hos
-	name = "\improper X-01 MultiPhase Energy Gun"
-	desc = "This is an expensive, modern recreation of an antique laser gun. This gun has several unique firemodes, but lacks the ability to recharge over time in exchange for inbuilt advanced firearm EMP shielding. <span class='boldnotice'>Right click in combat mode to fire a taser shot with a cooldown.</span>"
+	name = "\improper S-01 MultiPhase Energy Gun"
+	desc = "This is an expensive, modern recreation of an antique laser gun. This one has the word CYBERSUN etched into the side. This one seems to use an energy module ruled illegal in most areas. <span class='boldnotice'>Right click in combat mode to fire a taser shot with a cooldown.</span>"
 	icon_state = "hoslaser"
-	force = 10
+	force = 15
 	ammo_type = list(/obj/item/ammo_casing/energy/disabler, /obj/item/ammo_casing/energy/laser/hos, /obj/item/ammo_casing/energy/ion/hos, /obj/item/ammo_casing/energy/electrode/hos)
 	ammo_x_offset = 4
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | ACID_PROOF

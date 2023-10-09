@@ -546,9 +546,13 @@
 /obj/item/card/id/syndicate_command
 	name = "syndicate ID card"
 	desc = "An ID straight from the Syndicate."
+	icon_state = "syndie"
+	assignment = "Syndicate"
 	registered_name = "Syndicate"
 	assignment = "Syndicate Overlord"
 	access = list(ACCESS_SYNDICATE)
+
+
 
 /obj/item/card/id/no_banking
 	bank_support = ID_NO_BANK_ACCOUNT

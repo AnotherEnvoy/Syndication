@@ -1,6 +1,7 @@
 /obj/item/ammo_casing/energy/laser
 	projectile_type = /obj/item/projectile/beam/laser
 	select_name = "kill"
+	e_cost = 40
 
 /obj/item/ammo_casing/energy/laser/minigun
 	click_cooldown_override = 2
@@ -16,7 +17,7 @@
 	select_name = "kill"
 
 /obj/item/ammo_casing/energy/laser/hos
-	e_cost = 100
+	e_cost = 20
 
 /obj/item/ammo_casing/energy/laser/practice
 	projectile_type = /obj/item/projectile/beam/practice

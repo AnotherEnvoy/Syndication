@@ -175,28 +175,27 @@ export class Changelog extends Component {
 
     const header = (
       <Section>
-        <h1>S.P.L.U.R.T. Station 13</h1>
+        <h1>SYNDICATION</h1>
         <p>
           <b>Thanks to: </b>
           Citadel Station 13, /tg/station, Baystation 12, /vg/station,
           NTstation, CDK Station devs, FacepunchStation, GoonStation devs,
-          the original Space Station 13 developers, Invisty for the title image
-          and the countless others who have contributed to the game,
-          issue tracker or wiki over the years.
+          the original Space Station 13 developers, the SPLURT devs, Invisty for the title image
+          and the countless others who have contributed to the game over the years.
         </p>
         <p>
           {'Current project maintainers can be found '}
-          <a href="https://github.com/SPLURT-Station/S.P.L.U.R.T-Station-13/graphs/contributors">
+          <a href="https://github.com/AnotherEnvoy/Syndication/graphs/contributors">
             here
           </a>
           {', recent GitHub contributors can be found '}
-          <a href="https://github.com/SPLURT-Station/S.P.L.U.R.T-Station-13/pulse/monthly">
+          <a href="https://github.com/AnotherEnvoy/Syndication/pulse/monthly">
             here
           </a>.
         </p>
         <p>
           {'You can also join our discord '}
-          <a href="https://discord.com/invite/wynHVMzHzC">
+          <a href="https://discord.gg/EfCg6NeKY">
             here
           </a>.
         </p>

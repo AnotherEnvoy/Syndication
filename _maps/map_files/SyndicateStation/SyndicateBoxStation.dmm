@@ -1743,6 +1743,8 @@
 	pixel_y = 4
 	},
 /obj/structure/table/wood,
+/obj/item/uplink,
+/obj/item/stack/telecrystal/twenty,
 /turf/open/floor/mineral/plastitanium/red,
 /area/command/heads_quarters/hos)
 "aev" = (
@@ -1789,6 +1791,13 @@
 	pixel_x = -26
 	},
 /obj/effect/turf_decal/bot,
+/obj/item/ammo_box/magazine/wt550m9,
+/obj/item/ammo_box/magazine/wt550m9,
+/obj/item/ammo_box/magazine/wt550m9,
+/obj/item/ammo_box/magazine/wt550m9,
+/obj/item/ammo_box/magazine/wt550m9,
+/obj/item/ammo_box/magazine/wt550m9,
+/obj/item/ammo_box/magazine/wt550m9,
 /turf/open/floor/mineral/plastitanium/red,
 /area/ai_monitored/security/armory)
 "aex" = (
@@ -1801,6 +1810,7 @@
 /obj/item/gun/energy/laser/carbine,
 /obj/item/gun/energy/laser/carbine,
 /obj/item/gun/energy/laser/carbine,
+/obj/item/firing_pin/implant/pindicate,
 /turf/open/floor/mineral/plastitanium/red,
 /area/ai_monitored/security/armory)
 "aey" = (
@@ -1848,28 +1858,6 @@
 /area/ai_monitored/security/armory)
 "aeF" = (
 /obj/structure/table/reinforced,
-/obj/item/firing_pin/implant/pindicate,
-/obj/item/firing_pin/implant/pindicate,
-/obj/item/firing_pin/implant/pindicate,
-/obj/item/firing_pin/implant/pindicate,
-/obj/item/firing_pin/implant/pindicate,
-/obj/item/firing_pin/implant/pindicate,
-/obj/item/firing_pin/implant/pindicate,
-/obj/item/firing_pin/implant/pindicate,
-/obj/item/firing_pin/implant/pindicate,
-/obj/item/firing_pin/implant/pindicate,
-/obj/item/firing_pin/implant/pindicate,
-/obj/item/firing_pin/implant/pindicate,
-/obj/item/firing_pin/implant/pindicate,
-/obj/item/firing_pin/implant/pindicate,
-/obj/item/firing_pin/implant/pindicate,
-/obj/item/firing_pin/implant/pindicate,
-/obj/item/firing_pin/implant/pindicate,
-/obj/item/firing_pin/implant/pindicate,
-/obj/item/firing_pin/implant/pindicate,
-/obj/item/firing_pin/implant/pindicate,
-/obj/item/firing_pin/implant/pindicate,
-/obj/item/firing_pin/implant/pindicate,
 /obj/item/grenade/barrier,
 /obj/item/grenade/barrier,
 /obj/item/grenade/barrier,
@@ -1878,6 +1866,36 @@
 /obj/item/grenade/barrier,
 /obj/item/grenade/barrier,
 /obj/item/grenade/barrier,
+/obj/item/firing_pin/implant/pindicate,
+/obj/item/firing_pin/implant/pindicate,
+/obj/item/firing_pin/implant/pindicate,
+/obj/item/firing_pin/implant/pindicate,
+/obj/item/firing_pin/implant/pindicate,
+/obj/item/firing_pin/implant/pindicate,
+/obj/item/firing_pin/implant/pindicate,
+/obj/item/firing_pin/implant/pindicate,
+/obj/item/firing_pin/implant/pindicate,
+/obj/item/firing_pin/implant/pindicate,
+/obj/item/firing_pin/implant/pindicate,
+/obj/item/firing_pin/implant/pindicate,
+/obj/item/firing_pin/implant/pindicate,
+/obj/item/firing_pin/implant/pindicate,
+/obj/item/firing_pin/implant/pindicate,
+/obj/item/firing_pin/implant/pindicate,
+/obj/item/firing_pin/implant/pindicate,
+/obj/item/firing_pin/implant/pindicate,
+/obj/item/firing_pin/implant/pindicate,
+/obj/item/firing_pin/implant/pindicate,
+/obj/item/firing_pin/implant/pindicate,
+/obj/item/firing_pin/implant/pindicate,
+/obj/item/firing_pin/implant/pindicate,
+/obj/item/firing_pin/implant/pindicate,
+/obj/item/firing_pin/implant/pindicate,
+/obj/item/firing_pin/implant/pindicate,
+/obj/item/firing_pin/implant/pindicate,
+/obj/item/firing_pin/implant/pindicate,
+/obj/item/firing_pin/implant/pindicate,
+/obj/item/firing_pin/implant/pindicate,
 /turf/open/floor/mineral/plastitanium/red,
 /area/ai_monitored/security/armory)
 "aeG" = (
@@ -2719,14 +2737,19 @@
 	},
 /obj/effect/turf_decal/tile/red,
 /obj/effect/turf_decal/bot,
-/obj/item/gun/ballistic/automatic/wt550/wtrubber,
-/obj/item/gun/ballistic/automatic/wt550/wtrubber,
-/obj/item/gun/ballistic/automatic/wt550/wtrubber,
 /obj/item/ammo_box/magazine/wt550m9/wtrubber,
 /obj/item/ammo_box/magazine/wt550m9/wtrubber,
 /obj/item/ammo_box/magazine/wt550m9/wtrubber,
 /obj/item/ammo_box/magazine/wt550m9/wtrubber,
 /obj/item/ammo_box/magazine/wt550m9/wtrubber,
+/obj/item/ammo_box/magazine/wt550m9/wtrubber,
+/obj/item/ammo_box/magazine/wt550m9/wtrubber,
+/obj/item/ammo_box/magazine/wt550m9/wtrubber,
+/obj/item/ammo_box/magazine/wt550m9/wtrubber,
+/obj/item/ammo_box/magazine/wt550m9/wtrubber,
+/obj/item/gun/ballistic/automatic/wt550,
+/obj/item/gun/ballistic/automatic/wt550,
+/obj/item/gun/ballistic/automatic/wt550,
 /obj/item/ammo_box/magazine/wt550m9/wtrubber,
 /obj/item/ammo_box/magazine/wt550m9/wtrubber,
 /obj/item/ammo_box/magazine/wt550m9/wtrubber,
@@ -22024,6 +22047,8 @@
 /obj/item/folder/blue,
 /obj/item/stamp/captain,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/item/uplink,
+/obj/item/stack/telecrystal/twenty,
 /turf/open/floor/mineral/plastitanium,
 /area/command/heads_quarters/captain)
 "bfC" = (
@@ -23833,6 +23858,9 @@
 	},
 /obj/item/folder/white,
 /obj/item/pen,
+/obj/item/storage/firstaid/tactical,
+/obj/item/storage/firstaid/tactical,
+/obj/item/storage/firstaid/tactical,
 /turf/open/floor/mineral/plastitanium,
 /area/medical/paramedic)
 "bkd" = (
@@ -24462,6 +24490,12 @@
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
+/obj/structure/closet,
+/obj/item/mod/control/pre_equipped/syndicate_empty,
+/obj/item/mod/control/pre_equipped/syndicate_empty,
+/obj/item/mod/control/pre_equipped/syndicate_empty,
+/obj/item/mod/control/pre_equipped/syndicate_empty,
+/obj/item/mod/control/pre_equipped/syndicate_empty,
 /turf/open/floor/mineral/plastitanium,
 /area/science/robotics/lab)
 "blz" = (
@@ -25979,6 +26013,12 @@
 	dir = 4
 	},
 /obj/item/clothing/under/rank/captain/parade,
+/obj/item/mod/control/pre_equipped/syndicate_empty/elite,
+/obj/item/mod/control/pre_equipped/syndicate_empty/elite,
+/obj/item/mod/control/pre_equipped/syndicate_empty/elite,
+/obj/item/mod/control/pre_equipped/syndicate_empty/elite,
+/obj/item/mod/control/pre_equipped/syndicate_empty/elite,
+/obj/item/mod/control/pre_equipped/syndicate_empty/elite,
 /turf/open/floor/carpet/black,
 /area/command/heads_quarters/captain)
 "bpl" = (
@@ -28863,6 +28903,8 @@
 "bwk" = (
 /obj/structure/table,
 /obj/machinery/recharger,
+/obj/item/uplink,
+/obj/item/stack/telecrystal/twenty,
 /turf/open/floor/mineral/plastitanium,
 /area/command/heads_quarters/hop)
 "bwl" = (
@@ -28944,9 +28986,7 @@
 /turf/open/floor/mineral/plastitanium,
 /area/medical/surgery)
 "bwD" = (
-/obj/machinery/sleeper{
-	dir = 8
-	},
+/obj/machinery/sleeper/syndie,
 /turf/open/floor/mineral/plastitanium,
 /area/medical/medbay/central)
 "bwE" = (
@@ -29697,6 +29737,8 @@
 /obj/effect/turf_decal/tile/brown{
 	dir = 8
 	},
+/obj/item/uplink,
+/obj/item/stack/telecrystal/twenty,
 /turf/open/floor/mineral/plastitanium,
 /area/cargo/qm)
 "bym" = (
@@ -29739,6 +29781,8 @@
 	pixel_y = 5;
 	req_access_txt = "47"
 	},
+/obj/item/uplink,
+/obj/item/stack/telecrystal/twenty,
 /turf/open/floor/mineral/plastitanium,
 /area/command/heads_quarters/rd)
 "byp" = (
@@ -30234,7 +30278,7 @@
 /area/science/server)
 "bzu" = (
 /obj/machinery/rnd/server,
-/turf/open/floor/circuit/red,
+/turf/open/floor/plasteel/dark,
 /area/science/server)
 "bzv" = (
 /obj/machinery/atmospherics/pipe/simple{
@@ -30364,7 +30408,7 @@
 	dir = 8
 	},
 /obj/structure/table,
-/obj/item/storage/backpack/duffelbag/med/surgery,
+/obj/item/storage/backpack/duffelbag/syndie/surgery,
 /turf/open/floor/mineral/plastitanium,
 /area/medical/surgery)
 "bzJ" = (
@@ -30644,14 +30688,12 @@
 /turf/open/floor/plating,
 /area/maintenance/port/aft)
 "bAq" = (
-/obj/machinery/sleeper{
-	dir = 8
-	},
 /obj/machinery/camera{
 	c_tag = "Medbay Treatment Center";
 	dir = 8;
 	network = list("ss13","medbay")
 	},
+/obj/machinery/sleeper/syndie,
 /turf/open/floor/mineral/plastitanium,
 /area/medical/medbay/central)
 "bAr" = (
@@ -30717,7 +30759,7 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
-/turf/open/floor/plasteel/dark/telecomms,
+/turf/open/floor/plasteel/dark,
 /area/science/server)
 "bAA" = (
 /obj/machinery/atmospherics/pipe/manifold{
@@ -32355,6 +32397,8 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
 	},
+/obj/item/uplink,
+/obj/item/stack/telecrystal/twenty,
 /turf/open/floor/mineral/plastitanium,
 /area/command/heads_quarters/cmo)
 "bEl" = (
@@ -43967,6 +44011,8 @@
 /obj/structure/disposalpipe/segment,
 /obj/effect/landmark/event_spawn,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/item/uplink,
+/obj/item/stack/telecrystal/twenty,
 /turf/open/floor/mineral/plastitanium,
 /area/command/heads_quarters/ce)
 "ciq" = (
@@ -54702,7 +54748,7 @@
 /area/security/prison/upper)
 "iRV" = (
 /obj/structure/table,
-/obj/item/storage/backpack/duffelbag/med/surgery,
+/obj/item/storage/backpack/duffelbag/syndie/surgery,
 /turf/open/floor/mineral/plastitanium,
 /area/medical/surgery)
 "iTU" = (
@@ -61226,6 +61272,10 @@
 /obj/machinery/door/airlock/maintenance,
 /turf/open/floor/plasteel/dark/telecomms,
 /area/maintenance/bar)
+"sDq" = (
+/obj/machinery/rnd/production/techfab/department/security,
+/turf/open/floor/mineral/plastitanium/red,
+/area/ai_monitored/security/armory)
 "sEM" = (
 /obj/machinery/button/door{
 	id = "Torture Room Dorms";
@@ -61776,6 +61826,9 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/open/floor/mineral/plastitanium,
 /area/medical/medbay/central)
+"twY" = (
+/turf/open/floor/plasteel/dark,
+/area/science/server)
 "txs" = (
 /obj/effect/turf_decal/tile/neutral,
 /obj/effect/turf_decal/tile/neutral{
@@ -93914,7 +93967,7 @@ abG
 aaZ
 ahB
 aco
-agS
+sDq
 qPk
 bMY
 aex
@@ -107602,7 +107655,7 @@ bfV
 btx
 buU
 byf
-bzu
+twY
 bAz
 bzu
 bDb
