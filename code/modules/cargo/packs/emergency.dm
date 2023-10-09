@@ -216,7 +216,7 @@
 
 /datum/supply_pack/emergency/plasma_spacesuit
 	name = "Plasmaman Space Envirosuits"
-	desc = "Contains two space-worthy envirosuits for Plasmamen. Order now and we'll throw in two free helmets! Requires EVA access to open."
+	desc = "Contains two space-worthy envirosuits for Plasmamen. Requires EVA access to open."
 	cost = 4000
 	access = ACCESS_EVA
 	contains = list(/obj/item/clothing/suit/space/eva/plasmaman,
@@ -256,7 +256,7 @@
 
 /datum/supply_pack/emergency/spacesuit
 	name = "Space Suit Crate"
-	desc = "Contains two aging suits from Space-Goodwill. Requires EVA access to open."
+	desc = "Contains two stolen NT space suits found in a decaying station. Requires EVA access to open."
 	cost = 3000
 	contains = list(/obj/item/clothing/suit/space,
 					/obj/item/clothing/suit/space,
