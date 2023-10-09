@@ -7,7 +7,7 @@
 //////////////////////////////////////////////////////////////////////////////
 
 /datum/supply_pack/service
-	group = "Service"
+	group = "Donk Co."
 
 //////////////////////////////////////////////////////////////////////////////
 //////////////////////////////// Cargo ///////////////////////////////////////
@@ -240,7 +240,7 @@
 
 /datum/supply_pack/service/janitor/janpremium
 	name = "Janitor Supplies (Premium)"
-	desc = "The custodial union is in a tizzy, so we've gathered up some better supplies for you. In this crate you can get a brand new chem, Drying Agent. This stuff is the work of slimes or magic! This crate also contains a rag to test out the Drying Angent magic, several cleaning grenades, some spare bottles of ammonia, and an MCE (or Massive Cleaning Explosive)."
+	desc = "In this crate you can get a brand new chem, Drying Agent. This stuff is the work of slimes or magic! This crate also contains a rag to test out the Drying Angent magic, several cleaning grenades, some spare bottles of ammonia, and an MCE (or Massive Cleaning Explosive)."
 	cost = 2700
 	contains = list(/obj/item/grenade/clusterbuster/cleaner,
 					/obj/item/grenade/chem_grenade/cleaner,
@@ -255,7 +255,7 @@
 
 /datum/supply_pack/service/janitor/starter
 	name = "Janitorial Supplies (Standard)"
-	desc = "Fight back against dirt and grime with Nanotrasen's Janitorial Essentials(tm)! Contains three buckets, caution signs, and cleaner grenades. Also has a single mop, spray cleaner, rag, NT soap and a trash bag."
+	desc = "Contains three buckets, caution signs, and cleaner grenades. Also has a single mop, spray cleaner, rag, NT soap and a trash bag."
 	cost = 1300
 	contains = list(/obj/item/reagent_containers/glass/bucket,
 					/obj/item/reagent_containers/glass/bucket,
