@@ -30,13 +30,14 @@
 	item = /obj/item/gun/blastcannon
 	cost = 14							//High cost because of the potential for extreme damage in the hands of a skilled gas masked scientist.
 	restricted_roles = list("Research Director", "Scientist")
+	purchasable_from = UPLINK_NUKE_OPS
 
 /datum/uplink_item/role_restricted/alientech
 	name = "Alien Research Disk"
 	desc = "A technology disk holding a terabyte of highly confidential abductor technology. \
 			Simply insert into research console of choice and import the files from the disk. Because of its foreign nature, it may require multiple uploads to work properly."
 	item = /obj/item/disk/tech_disk/abductor
-	cost = 12
+	cost = 20
 	restricted_roles = list("Research Director", "Scientist", "Roboticist")
 
 /datum/uplink_item/device_tools/brainwash_disk
@@ -200,7 +201,7 @@
 	name = "Modified Syringe Gun"
 	desc = "A syringe gun that fires DNA injectors instead of normal syringes."
 	item = /obj/item/gun/syringe/dna
-	cost = 14
+	cost = 15
 	restricted_roles = list("Geneticist", "Chief Medical Officer")
 
 /datum/uplink_item/role_restricted/chemical_gun
@@ -208,7 +209,7 @@
 	desc = "A heavily modified syringe gun which is capable of synthesizing its own chemical darts using input reagents. \
 			Synthesizes one piercing 10 unit dart every 30 seconds up to a maximum of five. Can hold 100u of reagents."
 	item = /obj/item/gun/chem
-	cost = 10
+	cost = 15
 	restricted_roles = list("Chemist", "Chief Medical Officer")
 
 /datum/uplink_item/role_restricted/reverse_bear_trap
@@ -245,14 +246,16 @@
 /datum/uplink_item/role_restricted/crushmagboots
 	name = "Crushing Magboots"
 	desc = "A pair of extra-strength magboots that crush anyone you walk over."
-	cost = 2
+	cost = 10
 	item = /obj/item/clothing/shoes/magboots/crushing
 	restricted_roles = list("Chief Engineer", "Station Engineer", "Atmospheric Technician")
+	purchasable_from = UPLINK_NUKE_OPS
 
 /datum/uplink_item/role_restricted/turretbox
 	name = "Disposable Sentry Gun"
 	desc = "A disposable sentry gun deployment system cleverly disguised as a toolbox, apply wrench for functionality."
 	item = /obj/item/storage/toolbox/emergency/turret
-	cost = 11
+	cost = 20
 	restricted_roles = list("Station Engineer")
+	purchasable_from = UPLINK_NUKE_OPS
 
