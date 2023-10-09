@@ -41,14 +41,16 @@
 			an assembly to it in order to alter the way it detonates. It can be attached to almost all objects and has a modifiable timer with a \
 			minimum setting of 10 seconds."
 	item = /obj/item/grenade/plastic/c4
-	cost = 1
+	cost = 200
+	purchasable_from = UPLINK_NUKE_OPS
 
 /datum/uplink_item/explosives/c4bag
 	name = "Bag of C-4 explosives"
 	desc = "Because sometimes quantity is quality. Contains 10 C-4 plastic explosives."
 	item = /obj/item/storage/backpack/duffelbag/syndie/c4
-	cost = 9 //10% discount!
+	cost = 200 //10% discount!
 	cant_discount = TRUE
+	purchasable_from = UPLINK_NUKE_OPS
 
 /datum/uplink_item/explosives/x4bag
 	name = "Bag of X-4 explosives"
@@ -56,8 +58,9 @@
 			X-4 can be placed on a solid surface, such as a wall or window, and it will blast through the wall, injuring anything on the opposite side, while being safer to the user. \
 			For when you want a controlled explosion that leaves a wider, deeper, hole."
 	item = /obj/item/storage/backpack/duffelbag/syndie/x4
-	cost = 4 //
+	cost = 200 //
 	cant_discount = TRUE
+	purchasable_from = UPLINK_NUKE_OPS
 
 /datum/uplink_item/explosives/clown_bomb_clownops
 	name = "Clown Bomb"
@@ -77,16 +80,18 @@
 			detonate PDAs of crewmembers who have their message feature enabled. \
 			The concussive effect from the explosion will knock the recipient out for a short period, and deafen them for longer."
 	item = /obj/item/cartridge/virus/syndicate
-	cost = 5
+	cost = 200
 	restricted = TRUE
 	limited_stock = 1
+	purchasable_from = UPLINK_NUKE_OPS
 
 /datum/uplink_item/explosives/emp
 	name = "EMP Grenades and Implanter Kit"
 	desc = "A box that contains five EMP grenades and an EMP implant with three uses. Useful to disrupt communications, \
 			security's energy weapons and silicon lifeforms when you're in a tight spot."
 	item = /obj/item/storage/box/syndie_kit/emp
-	cost = 2
+	cost = 200
+	purchasable_from = UPLINK_NUKE_OPS
 
 /datum/uplink_item/explosives/virus_grenade
 	name = "Fungal Tuberculosis Grenade"
@@ -94,7 +99,7 @@
 			autoinjectors for rapid application on up to two targets each, a syringe, and a bottle containing \
 			the BVAK solution."
 	item = /obj/item/storage/box/syndie_kit/tuberculosisgrenade
-	cost = 8
+	cost = 200
 	surplus = 35
 	purchasable_from = UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS
 	restricted = TRUE
@@ -104,16 +109,18 @@
 	desc = "A belt containing 26 lethally dangerous and destructive grenades. Comes with an extra multitool and screwdriver."
 	item = /obj/item/storage/belt/grenade/full
 	purchasable_from = UPLINK_NUKE_OPS
-	cost = 22
+	cost = 200
 	surplus = 0
+	purchasable_from = UPLINK_NUKE_OPS
 
 /datum/uplink_item/explosives/pizza_bomb
 	name = "Pizza Bomb"
 	desc = "A pizza box with a bomb cunningly attached to the lid. The timer needs to be set by opening the box; afterwards, \
 			opening the box again will trigger the detonation after the timer has elapsed. Comes with free pizza, for you or your target!"
 	item = /obj/item/pizzabox/bomb
-	cost = 6
+	cost = 200
 	surplus = 8
+	purchasable_from = UPLINK_NUKE_OPS
 
 /datum/uplink_item/explosives/syndicate_bomb
 	name = "Syndicate Bomb"
@@ -123,7 +130,8 @@
 			transported to you that will teleport the actual bomb to it upon activation. Note that this bomb can \
 			be defused, and some crew may attempt to do so."
 	item = /obj/item/sbeacondrop/bomb
-	cost = 11
+	cost = 200
+	purchasable_from = UPLINK_NUKE_OPS
 
 /datum/uplink_item/explosives/syndicate_detonator
 	name = "Syndicate Detonator"
@@ -132,7 +140,7 @@
 			Useful for when speed matters or you wish to synchronize multiple bomb blasts. Be sure to stand clear of \
 			the blast radius before using the detonator."
 	item = /obj/item/syndicatedetonator
-	cost = 3
+	cost = 200
 	purchasable_from = UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS
 
 /datum/uplink_item/explosives/syndicate_minibomb
@@ -140,15 +148,15 @@
 	desc = "The minibomb is a grenade with a five-second fuse. Upon detonation, it will create a small hull breach \
 			in addition to dealing high amounts of damage to nearby personnel."
 	item = /obj/item/grenade/syndieminibomb
-	cost = 6
-	purchasable_from = ~UPLINK_CLOWN_OPS
+	cost = 200
+	purchasable_from = UPLINK_CLOWN_OPS
 
 /datum/uplink_item/explosives/tearstache
 	name = "Teachstache Grenade"
 	desc = "A teargas grenade that launches sticky moustaches onto the face of anyone not wearing a clown or mime mask. The moustaches will \
 		remain attached to the face of all targets for two minutes, preventing the use of breath masks and other such devices."
 	item = /obj/item/grenade/chem_grenade/teargas/moustache
-	cost = 3
+	cost = 200
 	surplus = 0
 	purchasable_from = UPLINK_CLOWN_OPS
 
@@ -157,6 +165,6 @@
 	desc = "A unique grenade that deploys a swarm of viscerators upon activation, which will chase down and shred \
 			any non-operatives in the area."
 	item = /obj/item/grenade/spawnergrenade/manhacks
-	cost = 5
+	cost = 200
 	surplus = 35
 	purchasable_from = UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS
