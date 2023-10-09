@@ -11,7 +11,7 @@
 	name = "Telescopic Baseball Bat"
 	desc = "A robust telescopic baseball bat that hits like a truck and can be concealed when collapsed."
 	item = /obj/item/melee/baseball_bat/telescopic
-	cost = 2
+	cost = 15
 
 /datum/uplink_item/stealthy_weapons/combatglovesplus
 	name = "Combat Gloves Plus"
@@ -37,6 +37,7 @@
 	item = /obj/item/gun/syringe/syndicate
 	cost = 4
 	surplus = 50
+	purchasable_from = UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS
 
 /datum/uplink_item/stealthy_weapons/dehy_carp
 	name = "Dehydrated Space Carp"
@@ -44,12 +45,13 @@
 			your hand before use so it knows not to kill you."
 	item = /obj/item/toy/plush/carpplushie/dehy_carp
 	cost = 1
+	purchasable_from = UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS
 
 /datum/uplink_item/stealthy_weapons/derringerpack
 	name = "Compact Derringer"
 	desc = "An easily concealable handgun capable of firing .357 rounds. Comes in an inconspicuious packet of cigarettes with additional munitions."
 	item = /obj/item/storage/fancy/cigarettes/derringer
-	cost = 6
+	cost = 15
 	surplus = 30
 
 /datum/uplink_item/stealthy_weapons/derringerpack/purchase(mob/user, datum/component/uplink/U)
@@ -69,7 +71,7 @@
 	name = "Energy Dagger"
 	desc = "A dagger made of energy that looks and functions as a pen when off."
 	item = /obj/item/pen/edagger
-	cost = 2
+	cost = 10
 
 /datum/uplink_item/stealthy_weapons/martialarts
 	name = "Sleeping Carp Scroll"
@@ -109,7 +111,7 @@
 		infinite number of bolts, but takes time to automatically recharge \
 		after each shot."
 	item = /obj/item/gun/energy/kinetic_accelerator/crossbow
-	cost = 12
+	cost = 15
 	surplus = 50
 	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
 
@@ -119,6 +121,7 @@
 	item = /obj/item/storage/box/syndie_kit/chemical
 	cost = 6
 	surplus = 50
+	purchasable_from = UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS
 
 /datum/uplink_item/stealthy_weapons/romerol_kit
 	name = "Romerol"
@@ -136,10 +139,11 @@
 	desc = "A syringe disguised as a functional pen, filled with a potent mix of drugs, including a \
 			strong anesthetic and a chemical that prevents the target from speaking. \
 			The pen holds one dose of the mixture, and can be refilled with any chemicals. Note that before the target \
-			falls asleep, they will be able to move and act."
+			falls asleep, they will be able to move and act. Often used for rape."
 	item = /obj/item/pen/sleepy
-	cost = 4
+	cost = 10
 	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
+	
 
 /datum/uplink_item/stealthy_weapons/taeclowndo_shoes
 	name = "Tae-clown-do Shoes"
@@ -161,11 +165,11 @@
 	desc = "A sinister-looking surfactant used to clean blood stains to hide murders and prevent DNA analysis. \
 			You can also drop it underfoot to slip people."
 	item = /obj/item/soap/syndie
-	cost = 1
+	cost = 5
 	surplus = 50
 
 /datum/uplink_item/stealthy_weapons/soap_clusterbang
 	name = "Slipocalypse Clusterbang"
 	desc = "A traditional clusterbang grenade with a payload consisting entirely of Syndicate soap. Useful in any scenario!"
 	item = /obj/item/grenade/clusterbuster/soap
-	cost = 6
+	cost = 15
