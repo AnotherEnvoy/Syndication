@@ -12,14 +12,14 @@
 	desc = "An implant injected into the body, and later activated at the user's will. It will inject a chemical \
 			cocktail which removes all incapacitating effects, lets the user run faster and has a mild healing effect."
 	item = /obj/item/storage/box/syndie_kit/imp_adrenal
-	cost = 8
+	cost = 10
 	player_minimum = 25
 
 /datum/uplink_item/implants/antistun
 	name = "CNS Rebooter Implant"
 	desc = "This implant will help you get back up on your feet faster after being stunned. Comes with an autosurgeon."
 	item = /obj/item/autosurgeon/anti_stun
-	cost = 12
+	cost = 5
 	purchasable_from = UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS
 
 /datum/uplink_item/implants/deathrattle
@@ -38,20 +38,20 @@
 	desc = "An implant injected into the body and later activated at the user's will. It will attempt to free the \
 			user from common restraints such as handcuffs."
 	item = /obj/item/storage/box/syndie_kit/imp_freedom
-	cost = 5
+	cost = 15
 
 /datum/uplink_item/implants/warp
 	name = "Warp Implant"
 	desc = "An implant injected into the body and later activated at the user's will. Allows the user to teleport to where they were 10 seconds ago. Has a 10 second cooldown."
 	item = /obj/item/storage/box/syndie_kit/imp_warp
-	cost = 6
+	cost = 25
 	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
 
 /datum/uplink_item/implants/hijack
 	name = "Hijack Implant"
 	desc = "An implant that will let you hack into the APCs on station, allowing you to control them at will and the machinery within those rooms."
 	item = /obj/item/implanter/hijack
-	cost = 14 //really overkill, 14 tc, can still get caught in a room you haven't hijacked and you're fucked.
+	cost = 20 //really overkill, 14 tc, can still get caught in a room you haven't hijacked and you're fucked.
 	surplus = 0 //nope not having hijack implants with surplus crates nope nope nope nope
 	restricted = TRUE
 
@@ -60,7 +60,7 @@
 	desc = "An implant injected into the body, allowing the use of an internal Syndicate radio. \
 			Used just like a regular headset, but can be disabled to use external headsets normally and to avoid detection."
 	item = /obj/item/storage/box/syndie_kit/imp_radio
-	cost = 4
+	cost = 30
 	restricted = TRUE
 
 /datum/uplink_item/implants/microbomb
@@ -93,14 +93,14 @@
 	desc = "This one-of-a-kind implant will make you almost invisible as long as you don't don't excessively move around. \
 			On activation, it will conceal you inside a chameleon cardboard box that is only revealed once someone bumps into it."
 	item = /obj/item/implanter/stealth
-	cost = 8
+	cost = 15
 
 /datum/uplink_item/implants/storage
 	name = "Storage Implant"
 	desc = "An implant injected into the body, and later activated at the user's will. It will open a small bluespace \
 			pocket capable of storing two regular-sized items."
 	item = /obj/item/storage/box/syndie_kit/imp_storage
-	cost = 8
+	cost = 5
 
 /datum/uplink_item/implants/thermals
 	name = "Thermal Eyes"
