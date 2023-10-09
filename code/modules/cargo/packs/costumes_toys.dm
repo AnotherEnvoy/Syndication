@@ -45,8 +45,8 @@
 	crate_type = /obj/structure/closet/crate/wooden
 
 /datum/supply_pack/costumes_toys/randomised/contraband
-	name = "Contraband Crate"
-	desc = "Psst.. bud... want some contraband? I can get you a poster, some nice cigs, dank, even some sponsored items...you know, the good stuff. Just keep it away from the cops, kay?"
+	name = "Syndicate Supply Crate"
+	desc = "While Nanotrasen might not like these, we do. Contains posters, pills, cards, clothes, or smokes. There's more, but hey."
 	contraband = TRUE
 	cost = 3000
 	num_contained = 5 //SOME
@@ -272,7 +272,7 @@
 
 /datum/supply_pack/costumes_toys/costume
 	name = "Standard Costume Crate"
-	desc = "Supply the station's entertainers with the equipment of their trade with these Nanotrasen-approved costumes! Contains a full clown and mime outfit, along with a bike horn and a bottle of nothing."
+	desc = "Supply the station's entertainers with the equipment of their trade with these stolen Nanotrasen costumes! Contains a full clown and mime outfit, along with a bike horn and a bottle of nothing."
 	cost = 1300
 	access = ACCESS_THEATRE
 	contains = list(/obj/item/storage/backpack/clown,
@@ -293,7 +293,7 @@
 
 /datum/supply_pack/costumes_toys/wizard
 	name = "Wizard Costume Crate"
-	desc = "Pretend to join the Wizard Federation with this full wizard outfit! Nanotrasen would like to remind its employees that actually joining the Wizard Federation is subject to termination of job and life."
+	desc = "Pretend to join the Wizard Federation with this full wizard outfit! Don't actually do that, though."
 	cost = 2000
 	contains = list(/obj/item/staff,
 					/obj/item/clothing/suit/wizrobe/fake,
@@ -336,7 +336,7 @@
 
 /datum/supply_pack/costumes_toys/randomised/tcg
 	name = "Big-Ass Booster Pack Pack"
-	desc = "A bumper load of NT TCG Booster Packs of varying series. Collect them all!"
+	desc = "A bumper load of stolen NT TCG Booster Packs of varying series. Collect them all!"
 	cost = 3000
 	contains = list()
 	crate_name = "booster pack pack"
