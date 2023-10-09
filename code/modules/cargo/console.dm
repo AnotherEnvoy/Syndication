@@ -55,7 +55,7 @@
 		return
 	if(user)
 		user.visible_message("<span class='warning'>[user] swipes a suspicious card through [src]!</span>",
-		"<span class='notice'>You adjust [src]'s routing and receiver spectrum, unlocking special supplies and contraband.</span>")
+		"<span class='notice'>You adjust [src]'s routing and receiver spectrum, unlocking special supplies and agent equipment.</span>")
 
 	obj_flags |= EMAGGED
 	contraband = TRUE
@@ -176,7 +176,7 @@
 				return
 			else
 				SSshuttle.shuttle_loan.loan_shuttle()
-				say("The supply shuttle has been loaned to CentCom.")
+				say("The supply shuttle has been loaned to Syndicate Command.")
 				investigate_log("[key_name(usr)] accepted a shuttle loan event.", INVESTIGATE_CARGO)
 				log_game("[key_name(usr)] accepted a shuttle loan event.")
 				. = TRUE
