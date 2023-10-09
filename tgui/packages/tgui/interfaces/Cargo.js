@@ -104,7 +104,7 @@ const CargoStatus = (props, context) => {
               onClick={() => act('send')} />
           ) || location}
         </LabeledList.Item>
-        <LabeledList.Item label="CentCom Message">
+        <LabeledList.Item label="Syndicate Message">
           {message}
         </LabeledList.Item>
         {!!loan && !requestonly && (
@@ -116,7 +116,7 @@ const CargoStatus = (props, context) => {
                 onClick={() => act('loan')} />
             ) || (
               <Box color="bad">
-                Loaned to Centcom
+                Loaned to Syndicate Command
               </Box>
             )}
           </LabeledList.Item>
@@ -186,7 +186,7 @@ export const CargoCatalog = (props, context) => {
                   </Table.Cell>
                   <Table.Cell
                     collapsing
-                    color="label"
+                    color="red"
                     textAlign="right">
                     {tags.join(', ')}
                   </Table.Cell>
@@ -195,6 +195,7 @@ export const CargoCatalog = (props, context) => {
                     textAlign="right">
                     <Button
                       fluid
+					  color="red"
                       tooltip={pack.desc}
                       tooltipPosition="left"
                       onClick={() => act('add', {
