@@ -87,7 +87,7 @@ const CargoStatus = (props, context) => {
   } = data;
   return (
     <Section
-      title="Cargo"
+      title="Donk Co. Imports & Exports"
       buttons={(
         <Box inline bold>
           <AnimatedNumber

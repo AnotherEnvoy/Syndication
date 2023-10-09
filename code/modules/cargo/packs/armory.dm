@@ -109,6 +109,30 @@
 	crate_name = "incendiary weapons crate"
 	crate_type = /obj/structure/closet/crate/secure/plasma
 	dangerous = TRUE
+	
+/datum/supply_pack/security/armory/stetchkincrate
+	name = "Stetchkin Crate"
+	desc = "Contains three Stetchkins for agents or your security team. Magazines not included."
+	cost = 8000
+	contains = list(/obj/item/gun/ballistic/automatic/pistol/no_mag,
+					/obj/item/gun/ballistic/automatic/pistol/no_mag,
+					/obj/item/gun/ballistic/automatic/pistol/no_mag,)
+	crate_name = "Stetchkinl Crate"
+	
+/datum/supply_pack/security/armory/soporificcrate
+	name = "Soporific Ammunition Resupply"
+	desc = "Contains six 10mm soporific magazines and three soporific ammo boxes.."
+	cost = 10000
+	contains = list(/obj/item/ammo_box/magazine/m10mm/soporific,
+					/obj/item/ammo_box/magazine/m10mm/soporific,
+					/obj/item/ammo_box/magazine/m10mm/soporific,
+					/obj/item/ammo_box/magazine/m10mm/soporific,
+					/obj/item/ammo_box/magazine/m10mm/soporific,
+					/obj/item/ammo_box/magazine/m10mm/soporific,
+					/obj/item/ammo_box/c10mm/soporific,
+					/obj/item/ammo_box/c10mm/soporific,)
+	crate_name = "Soporific Ammunition Crate"
+
 
 /datum/supply_pack/security/armory/miniguns
 	name = "Personal Miniature Energy Guns"

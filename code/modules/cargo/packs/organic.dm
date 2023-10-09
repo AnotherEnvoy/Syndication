@@ -7,7 +7,7 @@
 //////////////////////////////////////////////////////////////////////////////
 
 /datum/supply_pack/organic
-	group = "Food & Hydroponics"
+	group = "Donk Co. Food & Deliveries"
 	crate_type = /obj/structure/closet/crate/freezer
 
 /datum/supply_pack/organic/randomized
@@ -38,6 +38,17 @@
 					/obj/item/toy/plush/random)
 	crate_name = "combo meal w/toy"
 	crate_type = /obj/structure/closet/crate/wooden
+	
+/datum/supply_pack/organic/donkpocket
+	name = "Donkpocket Resupply"
+	desc = "Contains five packs of donkpockets!. Warning: Heated donkpockets are lethal to slime-like entities."
+	cost = 2000
+	contains = list(/obj/item/storage/box/donkpockets,
+					/obj/item/storage/box/donkpockets,
+					/obj/item/storage/box/donkpockets,
+					/obj/item/storage/box/donkpockets,
+					/obj/item/storage/box/donkpockets,)
+	crate_name = "Donk Co. Crate"
 
 /datum/supply_pack/organic/randomized/candy
 	name = "Candy Crate"
