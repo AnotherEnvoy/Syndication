@@ -7,7 +7,7 @@
 //////////////////////////////////////////////////////////////////////////////
 
 /datum/supply_pack/security/armory
-	group = "Armory"
+	group = "Gorlex Armory"
 	access = ACCESS_ARMORY
 	crate_type = /obj/structure/closet/crate/secure/weapon
 	can_private_buy = FALSE
@@ -158,7 +158,7 @@
 
 /datum/supply_pack/security/armory/russian
 	name = "Russian Surplus Crate"
-	desc = "Hello Comrade, we have the most modern Russian military equipment the black market can offer, for the right price of course. Sadly we couldn't remove the lock so it requires Armory access to open."
+	desc = "Hello Comrade, we have the most modern Russian military equipment the black market can offer, for the right price of course. Sadly, we couldn't remove the lock so it requires Armory access to open."
 	cost = 7500
 	contraband = TRUE
 	contains = list(/obj/item/reagent_containers/food/snacks/rationpack,
@@ -208,7 +208,7 @@
 
 /datum/supply_pack/security/armory/swat
 	name = "SWAT Crate"
-	desc = "Contains two fullbody sets of tough, fireproof, pressurized suits designed in a joint effort by IS-ERI and Nanotrasen. Each set contains a suit, helmet, mask, combat belt, and combat gloves. Requires Armory access to open."
+	desc = "Contains two stolen fullbody sets of tough, fireproof, pressurized suits designed in a joint effort by IS-ERI and Nanotrasen. Each set contains a suit, helmet, mask, combat belt, and combat gloves. Requires Armory access to open."
 	cost = 6000
 	contains = list(/obj/item/clothing/head/helmet/swat/nanotrasen,
 					/obj/item/clothing/head/helmet/swat/nanotrasen,
@@ -260,7 +260,7 @@
 /datum/supply_pack/security/armory/derringerclassic
 	name = "Holdout Crate"
 	crate_name = "dented crate"
-	desc = "Hey kid.. c'mere. Boss says we need to offload these, to any buyer, no questions asked. You pay us, we give you three of these guns, no strings attached. Locks are to ensure they get to PAYING customers."
+	desc = "These are considered illegal in Nanotrasen territory. Holds three guns. It's locked."
 	cost = 2000
 	contraband = TRUE
 	contains = list(/obj/item/storage/fancy/cigarettes/derringer/smuggled,
@@ -270,7 +270,7 @@
 
 /datum/supply_pack/security/armory/esoteric_arms
 	name = "Esoteric Armory Shipment"
-	desc = "Well.. you're an agent of taste, I can tell that much. For the right price.. we could see our way clear to send you one of our more... unique weapons."
+	desc = "While these are very much considered contraband in Nanotrasen territory, we in the Syndicate believe in shooting Nanotrasen agents."
 	hidden = TRUE
 	cost = 10000
 	can_private_buy = TRUE
