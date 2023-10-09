@@ -45,10 +45,9 @@
 /datum/uplink_item/suits/space_suit
 	name = "Syndicate Space Suit"
 	desc = "This red and black Syndicate space suit is less encumbering than Nanotrasen variants, \
-			fits inside bags, and has a weapon slot. Nanotrasen crew members are trained to report red space suit \
-			sightings, however."
+			fits inside bags, and has a weapon slot."
 	item = /obj/item/storage/box/syndie_kit/space
-	cost = 4
+	cost = 10
 
 /datum/uplink_item/suits/hardsuit
 	name = "Syndicate Hardsuit"
@@ -56,9 +55,9 @@
 			that runs off standard atmospheric tanks. Toggling the suit in and out of \
 			combat mode will allow you all the mobility of a loose fitting uniform without sacrificing armoring. \
 			Additionally the suit is collapsible, making it small enough to fit within a backpack. \
-			Nanotrasen crew who spot these suits are known to panic."
+			Nanotrasen crew who spot these suits are known to panic like a bitch."
 	item = /obj/item/clothing/suit/space/hardsuit/syndi
-	cost = 8
+	cost = 15
 	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS) //you can't buy it in nuke, because the elite hardsuit costs the same while being better
 
 /datum/uplink_item/suits/hardsuit/elite
@@ -66,22 +65,20 @@
 	desc = "An upgraded, elite version of the Syndicate hardsuit. It features fireproofing, and also \
 			provides the user with superior armor and mobility compared to the standard Syndicate hardsuit."
 	item = /obj/item/clothing/suit/space/hardsuit/syndi/elite
-	cost = 8
-	purchasable_from = UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS
+	cost = 60
 
 /datum/uplink_item/suits/hardsuit/shielded
 	name = "Shielded Syndicate Hardsuit"
 	desc = "An upgraded version of the standard Syndicate hardsuit. It features a built-in energy shielding system. \
 			The shields can handle up to three impacts within a short duration and will rapidly recharge while not under fire."
 	item = /obj/item/clothing/suit/space/hardsuit/shielded/syndi
-	cost = 30
-	purchasable_from = UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS
+	cost = 100
 
 /datum/uplink_item/suits/thiefgloves
 	name = "Thieving Gloves"
 	desc = "A pair of gloves that are insulated and frictionless, allowing you to steal easily from anyone you see."
 	item = /obj/item/clothing/gloves/thief
-	cost = 4
+	cost = 20
 
 /datum/uplink_item/suits/wallwalkers
 	name = "Wall Walking Boots"
@@ -89,7 +86,7 @@
 			for safety reasons.As well as this, they unfortunately cause minor breath loss as the majority of atoms in your lungs are sucked out into any solid object you walk through."
 	item = /obj/item/clothing/shoes/wallwalkers
 	cost = 6
-	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
+	purchasable_from = (UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
 
 /datum/uplink_item/device_tools/guerrillagloves
 	name = "Guerrilla Gloves"
@@ -102,7 +99,7 @@
 	name = "Mechanical Eyepatch"
 	desc = "An eyepatch that connects itself to your eye socket, enhancing your shooting to an impossible degree, allowing your bullets to ricochet far more often than usual."
 	item = /obj/item/clothing/glasses/eyepatch/syndicate
-	cost = 4
+	cost = 10
 
 /datum/uplink_item/device_tools/ablative_armwraps
 	name = "Ablative Armwraps"

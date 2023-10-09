@@ -12,14 +12,14 @@
 	desc = "A sleek box containing a small, easily concealable handgun that uses 10mm auto rounds in 8-round magazines. The handgun is compatible \
 			with suppressors."
 	item = /obj/item/storage/box/syndie_kit/pistol
-	cost = 7
+	cost = 10
 	purchasable_from = ~UPLINK_CLOWN_OPS
 
 /datum/uplink_item/dangerous/revolver
 	name = "Syndicate Revolver Kit"
 	desc = "A sleek box containing a brutally simple Syndicate revolver that fires .357 Magnum rounds and has 7 chambers, and an extra speedloader."
 	item = /obj/item/storage/box/syndie_kit/revolver
-	cost = 13
+	cost = 20
 	player_minimum = 15
 	surplus = 50
 	purchasable_from = ~UPLINK_CLOWN_OPS
@@ -29,7 +29,7 @@
 	desc = "A reusable rocket propelled grenade launcher preloaded with a low-yield 84mm HE round. \
 		Guaranteed to send your target out with a bang or your money back!"
 	item = /obj/item/gun/ballistic/rocketlauncher
-	cost = 8
+	cost = 100
 	surplus = 30
 	purchasable_from = UPLINK_NUKE_OPS
 
@@ -40,7 +40,7 @@
 	 		Uses sniper ammo. \
 	 		Bullets tend to veer off-course. We are not responsible for any unintentional damage or injury resulting from inaacuracy."
 	item = /obj/item/gun/ballistic/automatic/pistol/antitank/syndicate
-	cost = 14
+	cost = 20
 	surplus = 25
 	purchasable_from = UPLINK_NUKE_OPS
 
@@ -86,7 +86,7 @@
 	desc = "A box of shurikens and reinforced bolas from ancient Earth martial arts. They are highly effective \
 			 throwing weapons. The bolas can knock a target down and the shurikens will embed into limbs."
 	item = /obj/item/storage/box/syndie_kit/throwing_weapons
-	cost = 3
+	cost = 10
 
 /datum/uplink_item/dangerous/shotgun
 	name = "Bulldog Shotgun"
@@ -135,7 +135,7 @@
 	desc = "The energy sword is an edged weapon with a blade of pure energy. The sword is small enough to be \
 			pocketed when inactive. Activating it produces a loud, distinctive noise."
 	item = /obj/item/melee/transforming/energy/sword/saber
-	cost = 8
+	cost = 20
 	purchasable_from = ~UPLINK_CLOWN_OPS
 
 /datum/uplink_item/dangerous/shield
@@ -153,7 +153,7 @@
 			The rapier comes with its own sheath, and is capable of puncturing through almost any defense. \
 			However, due to the size of the blade and obvious nature of the sheath, the weapon stands out as being obviously nefarious."
 	item = /obj/item/storage/belt/sabre/rapier
-	cost = 8
+	cost = 10
 	purchasable_from = ~UPLINK_CLOWN_OPS
 
 /datum/uplink_item/dangerous/flamethrower

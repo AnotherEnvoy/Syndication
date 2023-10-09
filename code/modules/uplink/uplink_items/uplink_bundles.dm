@@ -67,8 +67,8 @@
 			this suit proves to be cheaper than your standard issue hardsuit, with none of the movement restrictions (or the space proofing) of the outdated spacesuits employed by the company. \
 			Comes with an armored vest, helmet, blood-red sneaksuit, sneakboots, specialized combat gloves and a high-tech balaclava which obfuscates both your voice and your face. The case is also rather useful as a storage container and bludgeoning implement."
 	item = /obj/item/storage/toolbox/infiltrator
-	cost = 5
-	limited_stock = 1 //you only get one so you don't end up with too many gun cases
+	cost = 10
+	limited_stock = 3 //you only get one so you don't end up with too many gun cases
 	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
 
 /datum/uplink_item/bundles_tc/cybernetics_bundle
@@ -128,6 +128,7 @@
 	cost = 20
 	purchasable_from = ~(UPLINK_NUKE_OPS)
 	cant_discount = TRUE
+	purchasable_from = UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS
 
 /datum/uplink_item/bundles_tc/surplus
 	name = "Syndicate Surplus Crate"
@@ -192,6 +193,7 @@
 	item = /obj/effect/gibspawner/generic // non-tangible item because techwebs use this path to determine illegal tech
 	cost = 0
 	cant_discount = TRUE
+	purchasable_from = UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS
 
 /datum/uplink_item/bundles_tc/random/purchase(mob/user, datum/component/uplink/U)
 	var/list/uplink_items = U.uplink_items

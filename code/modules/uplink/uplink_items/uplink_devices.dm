@@ -10,35 +10,37 @@
 /datum/uplink_item/device_tools/emag
 	name = "Cryptographic Sequencer"
 	desc = "The cryptographic sequencer, electromagnetic card, or emag, is a small card that unlocks hidden functions \
-			in electronic devices, subverts intended functions, and easily breaks security mechanisms."
+			in electronic devices, subverts intended functions, and easily breaks security mechanisms. \
+			Misuage will be severely punished."
 	item = /obj/item/card/emag
-	cost = 6
+	cost = 15
 
 /datum/uplink_item/device_tools/emagrecharge
 	name = "Electromagnet Charging Device"
 	desc = "A small device intended for recharging Cryptographic Sequencers. Using it will add five extra charges to the Cryptographic Sequencer."
 	item = /obj/item/emagrecharge
-	cost = 2
+	cost = 5
 
 /datum/uplink_item/device_tools/bluespacerecharge
 	name = "Bluespace Crystal Recharging Device"
 	desc = "A small device intended for recharging Wall Walking boots. Using it will add six charges to them. Use ten bluespace crystals on this recharger to add three more charges to it. "
 	item = /obj/item/bluespacerecharge
-	cost = 2
+	cost = 5
 
 /datum/uplink_item/device_tools/phantomthief
 	name = "Syndicate Mask"
 	desc = "A cheap plastic mask fitted with an adrenaline autoinjector, which can be used by simply tensing your muscles"
 	item = /obj/item/clothing/glasses/phantomthief/syndicate
-	cost = 2
+	cost = 5
 
 /datum/uplink_item/device_tools/cutouts
 	name = "Adaptive Cardboard Cutouts"
 	desc = "These cardboard cutouts are coated with a thin material that prevents discoloration and makes the images on them appear more lifelike. \
 			This pack contains three as well as a crayon for changing their appearances."
 	item = /obj/item/storage/box/syndie_kit/cutouts
-	cost = 1
+	cost = 10
 	surplus = 20
+	purchasable_from = UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS
 
 /datum/uplink_item/device_tools/assault_pod
 	name = "Assault Pod Targeting Device"
@@ -55,7 +57,7 @@
 			such as AI units and cyborgs, over their private binary channel. Caution should \
 			be taken while doing this, as unless they are allied with you, they are programmed to report such intrusions."
 	item = /obj/item/encryptionkey/binary
-	cost = 2
+	cost = 5
 	surplus = 75
 	restricted = TRUE
 
@@ -75,7 +77,7 @@
 			Recharge using bluespace crystals. \
 			Comes with 5 charges."
 	item = /obj/item/compressionkit
-	cost = 5
+	cost = 10
 
 /datum/uplink_item/device_tools/briefcase_launchpad
 	name = "Briefcase Launchpad"
@@ -90,21 +92,21 @@
 	desc = "Enables you to view all cameras on the main network, set up motion alerts and track a target. \
 			Bugging cameras allows you to disable them remotely."
 	item = /obj/item/camera_bug
-	cost = 1
+	cost = 10
 	surplus = 90
 
 /datum/uplink_item/device_tools/military_belt
 	name = "Chest Rig"
 	desc = "A robust seven-slot set of webbing that is capable of holding all manner of tactical equipment."
 	item = /obj/item/storage/belt/military
-	cost = 1
+	cost = 5
 	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
 
 /datum/uplink_item/device_tools/ammo_pouch
 	name = "Ammo Pouch"
 	desc = "A small yet large enough pouch that can fit in your pocket, and has room for three magazines."
 	item = /obj/item/storage/bag/ammo
-	cost = 1
+	cost = 2
 
 /datum/uplink_item/device_tools/fakenucleardisk
 	name = "Decoy Nuclear Authentication Disk"
@@ -113,6 +115,7 @@
 	item = /obj/item/disk/nuclear/fake
 	cost = 1
 	surplus = 1
+	purchasable_from = UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS
 
 /datum/uplink_item/device_tools/frame
 	name = "F.R.A.M.E. PDA Cartridge"
@@ -123,6 +126,7 @@
 	item = /obj/item/cartridge/virus/frame
 	cost = 2
 	restricted = TRUE
+	purchasable_from = UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS
 
 /datum/uplink_item/device_tools/toolbox
 	name = "Full Syndicate Toolbox"
@@ -139,19 +143,22 @@
 	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
 	item = /obj/item/syndie_glue
 	cost = 2
-
+	purchasable_from = UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS
+	
 /datum/uplink_item/device_tools/hacked_module
 	name = "Hacked AI Law Upload Module"
 	desc = "When used with an upload console, this module allows you to upload priority laws to an artificial intelligence. \
 			Be careful with wording, as artificial intelligences may look for loopholes to exploit."
 	item = /obj/item/aiModule/syndicate
 	cost = 9
+	purchasable_from = UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS
 
 /datum/uplink_item/device_tools/damaged_module
 	name = "Damaged AI Law Upload Module"
 	desc = "This AI law upload module has been laying around our warehouse for god knows how long. We do not know why you would ever use this."
 	item = /obj/item/aiModule/core/full/damaged
 	cost = 5
+	purchasable_from = UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS
 
 /datum/uplink_item/device_tools/headsetupgrade
 	name = "Headset Upgrader"
@@ -172,6 +179,7 @@
 	desc = "An oversized version of what you'd initially expect here. Big enough to crush skulls."
 	item = /obj/item/nutcracker
 	cost = 1
+	purchasable_from = UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS
 
 /datum/uplink_item/device_tools/singularity_beacon
 	name = "Power Beacon"
@@ -182,6 +190,7 @@
 			that will teleport the larger beacon to your location upon activation."
 	item = /obj/item/sbeacondrop
 	cost = 14
+	purchasable_from = UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS
 
 /datum/uplink_item/device_tools/powersink
 	name = "Power Sink"
@@ -190,6 +199,7 @@
 			traditional bags and boxes. Caution: Will explode if the powernet contains sufficient amounts of energy."
 	item = /obj/item/powersink
 	cost = 6
+	purchasable_from = UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS
 
 /datum/uplink_item/device_tools/rad_laser
 	name = "Radioactive Microlaser"
@@ -199,6 +209,7 @@
 			and wavelength, which controls the delay before the effect kicks in."
 	item = /obj/item/healthanalyzer/rad_laser
 	cost = 3
+	purchasable_from = UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS
 
 /datum/uplink_item/device_tools/riflery_primer
 	name = "Riflery Primer"
@@ -206,7 +217,7 @@
 			this primer of questionable worth and value is rumored to increase your rifle-bolt-working and/or shotgun \
 			racking fivefold. Then again, the techniques here only work on bolt-actions and pump-actions..."
 	item = /obj/item/book/granter/trait/rifleman
-	cost = 3 // fuck it available for everyone
+	cost = 20 // fuck it available for everyone
 
 /datum/uplink_item/device_tools/stimpack
 	name = "Stimpack"
@@ -215,6 +226,7 @@
 	item = /obj/item/reagent_containers/hypospray/medipen/stimulants
 	cost = 5
 	surplus = 90
+	purchasable_from = UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS
 
 /datum/uplink_item/device_tools/medkit
 	name = "Syndicate Combat Medic Kit"
@@ -230,20 +242,20 @@
 	desc = "The Syndicate surgery duffel bag is a toolkit containing all surgery tools, surgical drapes, \
 			a Syndicate brand MMI, a straitjacket, and a muzzle."
 	item = /obj/item/storage/backpack/duffelbag/syndie/surgery
-	cost = 3
+	cost = 5
 
 /datum/uplink_item/device_tools/surgerybag_adv
 	name = "Advanced Syndicate Surgery Duffel Bag"
 	desc = "A Syndicate surgery duffel bag, with a set of upgraded surgery tools to boot."
 	item = /obj/item/storage/backpack/duffelbag/syndie/surgery_adv
-	cost = 6
+	cost = 10
 
 /datum/uplink_item/device_tools/encryptionkey
 	name = "Syndicate Encryption Key"
 	desc = "A key that, when inserted into a radio headset, allows you to listen to all station department channels \
 			as well as talk on an encrypted Syndicate channel with other agents that have the same key."
 	item = /obj/item/encryptionkey/syndicate
-	cost = 2
+	cost = 30
 	surplus = 75
 	restricted = TRUE
 
@@ -254,7 +266,7 @@
 			of the originals, these inferior copies are still quite useful, being able to provide \
 			both weal and woe on the battlefield, even if they do occasionally bite off a finger."
 	item = /obj/item/storage/book/bible/syndicate
-	cost = 9
+	cost = 40
 
 /datum/uplink_item/device_tools/thermal
 	name = "Thermal Imaging Glasses"
@@ -263,15 +275,14 @@
 			emitted as heat and light by objects. Hotter objects, such as warm bodies, cybernetic organisms \
 			and artificial intelligence cores emit more of this light than cooler objects like walls and airlocks."
 	item = /obj/item/clothing/glasses/thermal/syndi
-	cost = 4
+	cost = 10
 
 /datum/uplink_item/device_tools/potion
 	name = "Syndicate Sentience Potion"
 	item = /obj/item/slimepotion/slime/sentience/nuclear
 	desc = "A potion recovered at great risk by undercover Syndicate operatives and then subsequently modified with Syndicate technology. \
 			Using it will make any animal sentient, and bound to serve you, as well as implanting an internal radio for communication and an internal ID card for opening doors."
-	cost = 2
-	purchasable_from = UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS
+	cost = 29
 	restricted = TRUE
 
 //this seems like a terrible idea to me, so commenting it out for now. -Shell
@@ -283,7 +294,8 @@
 			Please note: This Rod fissiles much faster than it's regular counterpart, it doesn't take \
 			much to overload the reactor with these..."
 	item = /obj/item/twohanded/required/fuel_rod/material/telecrystal
-	cost = 7
+	cost = 800
+	purchasable_from = UPLINK_NUKE_OPS
 */
 
 /* for now
@@ -295,5 +307,6 @@
 	cost = 7
 	restricted = TRUE
 	limited_stock = 1
+	purchasable_from = UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS
 */
 
