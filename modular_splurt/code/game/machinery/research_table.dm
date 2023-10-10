@@ -146,7 +146,7 @@
 	points_awarded *= CONFIG_GET(number/sex_table_multiplier)
 	switch(point_type)
 		if(POINT_TYPE_SCIENCE)
-			SSresearch.science_tech.add_point_list(list(TECHWEB_POINT_TYPE_GENERIC = points_awarded))
+			SSresearch.science_tech.modify_points(points_awarded)
 		else
 			if(slaver_mode) // Slaver version generates money for the slavers instead.
 				GLOB.slavers_credits_balance += points_awarded

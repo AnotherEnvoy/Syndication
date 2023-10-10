@@ -13,9 +13,9 @@
 	var/list/design_ids = list()
 	var/list/unlock_ids = list()			//CALCULATED FROM OTHER NODE'S PREREQUISITES. Assoc list id = TRUE.
 	var/list/boost_item_paths = list()		//Associative list, path = list(point type = point_value).
-	var/autounlock_by_boost = TRUE			//boosting this will autounlock this node.
-	var/list/research_costs = list()		//Point cost to research. type = amount
 	var/category = "Misc"				//Category
+	var/autounlock_by_boost = TRUE			//boosting this will autounlock this node.
+	var/research_costs = 10
 
 /datum/techweb_node/error_node
 	id = "ERROR"
@@ -80,7 +80,7 @@
 	unlock_ids -= node_id
 
 /datum/techweb_node/proc/price_display(datum/techweb/TN)
-	return techweb_point_display_generic(get_price(TN))
+	return "Credits: [get_price(TN)]"
 
 /datum/techweb_node/proc/get_price(datum/techweb/host)
 	if(host)

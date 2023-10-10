@@ -5,7 +5,7 @@
 	display_name = "Alien Technology"
 	description = "Things used by the greys."
 	prereq_ids = list("biotech","engineering")
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 5000)
+	research_costs = 5000
 	hidden = TRUE
 	design_ids = list("alienalloy")
 
@@ -25,7 +25,7 @@
 	description = "Advanced biological tools."
 	prereq_ids = list("alientech", "advance_surgerytools")
 	design_ids = list("alien_scalpel", "alien_hemostat", "alien_retractor", "alien_saw", "alien_drill", "alien_cautery", "ayyplantgenes")
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 5000)
+	research_costs = 5000
 
 /datum/techweb_node/alien_engi
 	id = "alien_engi"
@@ -33,4 +33,4 @@
 	description = "Alien engineering tools."
 	prereq_ids = list("alientech", "exp_tools")
 	design_ids = list("alien_wrench", "alien_wirecutters", "alien_screwdriver", "alien_crowbar", "alien_welder", "alien_multitool")
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 5000)
+	research_costs = 5000

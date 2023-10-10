@@ -18,17 +18,5 @@
 	if(SSresearch.techweb_point_items[I.type])
 		return SSresearch.techweb_point_items[I.type]
 
-/proc/techweb_point_display_generic(pointlist)
-	var/list/ret = list()
-	for(var/i in pointlist)
-		if(SSresearch.point_types[i])
-			ret += "[SSresearch.point_types[i]]: [pointlist[i]]"
-		else
-			ret += "ERRORED POINT TYPE: [pointlist[i]]"
-	return ret.Join("<BR>")
-
-/proc/techweb_point_display_rdconsole(pointlist, last_pointlist)
-	var/list/ret = list()
-	for(var/i in pointlist)
-		ret += "[SSresearch.point_types[i] || "ERRORED POINT TYPE"]: [pointlist[i]] (+[(last_pointlist[i]) * ((SSresearch.flags & SS_TICKER)? (600 / (world.tick_lag * SSresearch.wait)) : (600 / SSresearch.wait))]/ minute)"
-	return ret.Join("<BR>")
+/proc/techweb_point_display_rdconsole(points, last_points)
+	return "[points] (+[(last_points) * ((SSresearch.flags & SS_TICKER)? (600 / (world.tick_lag * SSresearch.wait)) : (600 / SSresearch.wait))]/ minute)"

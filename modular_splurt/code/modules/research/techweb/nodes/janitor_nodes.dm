@@ -4,4 +4,4 @@
 	description = "Clean messes like Abductors clean up witnesses"
 	prereq_ids = list("alien_stockparts", "bspspray")
 	design_ids = list("ultimatespray")
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 1500)
+	research_costs = 1500

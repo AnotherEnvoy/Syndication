@@ -32,7 +32,7 @@
 		if(!do_after(user, 100, target=src))
 			to_chat(user,"You must stand still to analyze.")
 			return
-		SSresearch.science_tech.add_point_list(list(TECHWEB_POINT_TYPE_GENERIC = 2000))
+		SSresearch.science_tech.modify_points(2000)
 		to_chat(user,"You successfully researched the artifact. You have gained 2000 research points.")
 		qdel(src)
 
@@ -49,7 +49,7 @@
 		if(!do_after(user, 100, target=src))
 			to_chat(user,"You must stand still to analyze.")
 			return
-		SSresearch.science_tech.add_point_list(list(TECHWEB_POINT_TYPE_GENERIC = 4000))
+		SSresearch.science_tech.modify_points(4000)
 		to_chat(user,"You successfully researched the artifact. You have gained 4000 research points.")
 		qdel(src)
 
@@ -66,7 +66,7 @@
 		if(!do_after(user, 100, target=src))
 			to_chat(user,"You must stand still to analyze.")
 			return
-		SSresearch.science_tech.add_point_list(list(TECHWEB_POINT_TYPE_GENERIC = 4000))
+		SSresearch.science_tech.modify_points(4000)
 		to_chat(user,"You successfully researched the artifact. You have gained 4000 research points.")
 		qdel(src)
 	if(istype(W,/obj/item/xenoarch/help/plant))

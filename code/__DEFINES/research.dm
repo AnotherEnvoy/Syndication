@@ -63,16 +63,6 @@
 #define RESEARCH_MATERIAL_RECLAMATION_ID		"__materials"
 #define RESEARCH_DEEP_SCAN_ID					"__deepscan"
 
-//When adding new types, update the list below!
-#define TECHWEB_POINT_TYPE_GENERIC "General Research"
-
-#define TECHWEB_POINT_TYPE_DEFAULT TECHWEB_POINT_TYPE_GENERIC
-
-//defined here so people don't forget to change this!
-#define TECHWEB_POINT_TYPE_LIST_ASSOCIATIVE_NAMES list(\
-	TECHWEB_POINT_TYPE_GENERIC = "General Research"\
-	)
-
 #define LARGEST_BOMB				"bomb"
 
 #define BOMB_TARGET_POINTS			50000 //Adjust as needed. Actual hard cap is double this, but will never be reached due to hyperbolic curve.

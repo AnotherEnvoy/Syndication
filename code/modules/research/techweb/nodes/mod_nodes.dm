@@ -31,7 +31,7 @@
 		"mod_drill",
 		"mod_orebag",
 	)
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
+	research_costs = 2500
 
 /datum/techweb_node/mod_engineering
 	id = "mod_engineering"
@@ -47,7 +47,7 @@
 		"mod_constructor",
 		"mod_mister_atmos",
 	)
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
+	research_costs = 2500
 
 /datum/techweb_node/mod_advanced_engineering
 	id = "mod_advanced_engineering"
@@ -60,7 +60,7 @@
 		"mod_rad_protection",
 		"mod_emp_shield",
 	)
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 3500)
+	research_costs = 3500
 
 /datum/techweb_node/mod_medical
 	id = "mod_medical"
@@ -74,7 +74,7 @@
 		"mod_quick_carry",
 		"mod_dna_lock",
 	)
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
+	research_costs = 2500
 
 /datum/techweb_node/mod_advanced_medical
 	id = "mod_advanced_medical"
@@ -85,7 +85,7 @@
 		"mod_defib",
 		"mod_surgicalprocessor",
 	)
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 3500)
+	research_costs = 3500
 
 /datum/techweb_node/mod_security
 	id = "mod_security"
@@ -99,7 +99,7 @@
 		"mod_mag_harness",
 		"mod_holster",
 	)
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
+	research_costs = 2500
 
 /datum/techweb_node/mod_entertainment
 	id = "mod_entertainment"
@@ -111,7 +111,7 @@
 		"mod_bikehorn",
 		"mod_microwave_beam",
 	)
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
+	research_costs = 2500
 
 /datum/techweb_node/mod_anomaly
 	id = "mod_anomaly"
@@ -122,4 +122,4 @@
 		"mod_antigrav",
 		"mod_teleporter",
 	)
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
+	research_costs = 2500

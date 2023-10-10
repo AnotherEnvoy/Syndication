@@ -4,7 +4,7 @@
 	description = "A better sprayer for your job!"
 	prereq_ids = list("janitor")
 	design_ids = list("bluespacespray")
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 750)
+	research_costs = 750
 
 /datum/techweb_node/syndicate_basic/cool
 	id = "syndicate_cool"
@@ -12,7 +12,7 @@
 	description = "Shoot with style! Cannot be supressed!"
 	prereq_ids = list("syndicate_basic")
 	design_ids = list("luger")
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
+	research_costs = 2500
 	hidden = FALSE
 
 /datum/techweb_node/adv_bluetravel
@@ -21,7 +21,7 @@
 	description = "Using superior knowledge of bluespace, you can develop more finely-controlled teleportation equipment."
 	prereq_ids = list("adv_bluespace", "bluespace_warping")
 	design_ids = list("telepad", "telesci_console")
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 5000)
+	research_costs = 5000
 
 /datum/techweb_node/adv_toolset_implant
 	id = "adv_toolset_implant"
@@ -29,7 +29,7 @@
 	description = "Allows the creation of alien powerful implants for your arms."
 	prereq_ids = list("alien_bio", "alien_engi", "adv_cyber_implants")
 	design_ids = list("ci-toolset-adv","ci-surgery-adv")
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 5000)
+	research_costs = 5000
 
 /datum/techweb_node/advance_surgerytools/New()
 	design_ids += "autodoc"

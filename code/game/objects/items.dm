@@ -316,10 +316,10 @@ GLOBAL_VAR_INIT(embedpocalypse, FALSE) // if true, all items will be able to emb
 			research_msg += sep
 			research_msg += node.display_name
 			sep = ", "
-	var/list/points = techweb_item_point_check(src)
-	if (length(points))
+	var/points = techweb_item_point_check(src)
+	if (points)
 		sep = ", "
-		research_msg += techweb_point_display_generic(points)
+		research_msg += points
 
 	if (!sep) // nothing was shown
 		research_msg += "None"

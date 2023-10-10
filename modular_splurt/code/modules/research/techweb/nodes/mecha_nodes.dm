@@ -16,4 +16,4 @@
 		"savannah_ivanov_peri",
 		"savannah_ivanov_targ",
 	)
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 5000)
+	research_costs = 5000

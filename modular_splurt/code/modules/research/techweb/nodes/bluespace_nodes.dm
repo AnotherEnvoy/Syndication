@@ -5,7 +5,7 @@
 	description = "Even more powerful.. POWA!!!"
 	prereq_ids = list("adv_power", "adv_bluespace","bluespace_power")
 	design_ids = list("bluespace_cell_reactor")
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 5000)
+	research_costs = 5000
 
 // Bags of holding node
 /datum/techweb_node/bluespace_holding/New()
