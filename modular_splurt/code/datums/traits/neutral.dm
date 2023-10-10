@@ -924,7 +924,7 @@
 	SIGNAL_HANDLER
 
 	var/mob/living/carbon/human/H = quirk_holder
-	var/static/regex/sexywords = regex("sex|fuck|hump|dick|cock|penis|pussy|clit|cum|jizz|orgasm|spurt")
+	var/static/regex/sexywords = regex("sex|fuck|hump|dick|cock|penis|pussy|clit|cum|jizz|orgasm|spurt|slut|fucktoy|whore|slave|sextoy")
 	var/list/nnngh = list(
 		"Hearing that really got you going...",
 		"Calm down... it's just words...",
@@ -935,7 +935,7 @@
 		return
 	if (findtext(lowertext(hearing_args[HEARING_RAW_MESSAGE]), sexywords) && sexword_delay < world.time)
 		H.handle_post_sex(5, null, null)
-		sexword_delay = world.time + 10 SECONDS
+		sexword_delay = world.time + 1 SECONDS
 		spawn(2) // this is just for aesthetics so the notification is placed after the message in chatbox, if it causes issues feel free to remove :dawgdoin:
 		to_chat(H, span_lewd(pick(nnngh)))
 
