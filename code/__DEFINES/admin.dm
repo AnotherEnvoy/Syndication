@@ -105,4 +105,4 @@
 /// for asay pings, this is the index in the return list for [/proc/check_admin_pings] that contains the message modified with underlines for the spotted names
 #define ADMINSAY_PING_UNDERLINE_NAME_INDEX "!underlined_names"
 
-#define DEFAULT_CENTCOM_NAME "Central Command"
+#define DEFAULT_CENTCOM_NAME "Cybersun Industries"
