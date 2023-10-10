@@ -245,7 +245,7 @@
 	description = "Chemical, Biological, Radiological and Nuclear protective gear"
 	prereq_ids = list("engineering")
 	design_ids = list("cbrn_civi", "cbrn_sec", "cbrn_engi", "cbrn_serv", "cbrn_cargo", "cbrn_sci", "cbrn_med", "cbrn_mask", "cbrn_boots", "cbrn_gloves", "cbrn_glovesengi", "cbrn_hood", "cbrn_oxy", "cbrn_plasma")
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2000)
+	research_costs = 2000
 
 /datum/techweb_node/mopp
 	id = "mopp"
@@ -253,4 +253,4 @@
 	description = "Mission Oriented Protective Posture gear, meant for sec."
 	prereq_ids = list("cbrn")
 	design_ids = list("mopp_suit", "mopp_mask", "mopp_boots", "mopp_gloves", "mopp_hood")
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 3000)
+	research_costs = 3000

@@ -348,7 +348,7 @@
 	description = "Xenoarchaeology tools that are used for xenoarchaeology, who knew."
 	prereq_ids = list("base")
 	design_ids = list("hammercm1","hammercm2","hammercm3","hammercm4","hammercm5","hammercm6","hammercm15","hammerbrush","xenoscanner","xenomeasure","xenobelt","xenorockback")
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 750)
+	research_costs = 750
 
 /datum/techweb_node/portxenoarch
 	id = "portxenoarch"
@@ -356,7 +356,7 @@
 	description = "Tools for extracting seeds, and for getting some research points."
 	prereq_ids = list("xenoarchtools")
 	design_ids = list("xenoresearch","xenoplant")
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 1000)
+	research_costs = 1000
 
 /datum/techweb_node/advportcargo
 	id = "advportcargo"
@@ -364,7 +364,7 @@
 	description = "A tool for selling stuff not through a shuttle. Careful with its use."
 	prereq_ids = list("portxenoarch")
 	design_ids = list("advcargoscanner")
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 5000)
+	research_costs = 5000
 
 /datum/techweb_node/advxenoarch
 	id = "advxenoarch"
@@ -372,7 +372,7 @@
 	description = "Tools that can make your excavation and recovering of artifacts easier."
 	prereq_ids = list("xenoarchtools")
 	design_ids = list("advxenoscanner","hammercmadv","hammerbrushadv","xenorockbackadv")
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 3000)
+	research_costs = 3000
 
 //Research DESIGNS
 

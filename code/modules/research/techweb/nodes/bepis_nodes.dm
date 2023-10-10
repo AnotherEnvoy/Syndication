@@ -6,7 +6,7 @@
 	description = "Applications of lighting and vision technology not originally thought to be commercially viable."
 	prereq_ids = list("base")
 	design_ids = list("bright_helmet", "rld_mini")
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
+	research_costs = 2500
 	hidden = TRUE
 	experimental = TRUE
 
@@ -16,7 +16,7 @@
 	description = "It is said that security in the Australicus sector is tight, so we took some pointers from their equipment. Thankfully, our sector lacks any signs of these, 'dropbears'."
 	prereq_ids = list("base")
 	design_ids = list("pin_explorer", "stun_boomerang")
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
+	research_costs = 2500
 	hidden = TRUE
 	experimental = TRUE
 
@@ -26,7 +26,7 @@
 	description = "Conventional wisdom has deemed these engineering products 'technically' safe, but far too dangerous to traditionally condone."
 	prereq_ids = list("base")
 	design_ids = list("lava_rods", "eng_gloves")
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
+	research_costs = 2500
 	hidden = TRUE
 	experimental = TRUE
 
@@ -36,7 +36,7 @@
 	description = "Adding wheels to things can lead to extremely beneficial outcomes."
 	prereq_ids = list("base")
 	design_ids = list("rolling_table")
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
+	research_costs = 2500
 	hidden = TRUE
 	experimental = TRUE
 
@@ -46,7 +46,7 @@
 	description = "A bored scientist was thinking to himself for very long...and then realized his coffee got cold! He made this invention to solve this extreme problem."
 	prereq_ids = list("base")
 	design_ids = list("mauna_mug")
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
+	research_costs = 2500
 	hidden = TRUE
 	experimental = TRUE
 
@@ -56,7 +56,7 @@
 	description = "Advanced behaviours that allow nanites to exploit certain circumstances to replicate faster."
 	prereq_ids = list("nanite_smart")
 	design_ids = list("kickstart_nanites","factory_nanites","offline_nanites","synergy_nanites")
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 5000)
+	research_costs = 5000
 	hidden = TRUE
 	experimental = TRUE
 
@@ -66,7 +66,7 @@
 	description = "Advanced behaviours that allow nanites to increase their maximum volume at variable cost."
 	prereq_ids = list("nanite_smart")
 	design_ids = list("hive_nanites", "zip_nanites", "free_range_nanites", "unsafe_storage_nanites")
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 5000)
+	research_costs = 5000
 	hidden = TRUE
 	experimental = TRUE
 
@@ -77,7 +77,7 @@
 	Ethical concerns about loss of free will may still apply, according to galactic law."
 	prereq_ids = list("base")
 	design_ids = list("hypnochair")
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 3500)
+	research_costs = 3500
 	hidden = TRUE
 	experimental = TRUE
 
@@ -87,7 +87,7 @@
 	description = "Nanotrasen would like to remind its researching staff that it is never acceptable to \"glomp\" your coworkers, and further \"scientific trials\" on the subject \
 	will no longer be accepted in its academic journals."
 	design_ids = list("tackle_dolphin", "tackle_rocket")
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
+	research_costs = 2500
 	hidden = TRUE
 	experimental = TRUE
 
@@ -96,6 +96,6 @@
 	display_name = "Advanced Sticky Technology"
 	description = "Taking a good joke too far? Nonsense!"
 	design_ids = list("super_sticky_tape", "pointy_tape")
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
+	research_costs = 2500
 	hidden = TRUE
 	experimental = TRUE

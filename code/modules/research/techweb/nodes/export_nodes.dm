@@ -18,4 +18,4 @@
 	prereq_ids = list("blueprinted_bottles")
 	description = "New bottles for printing, storage and selling."
 	design_ids = list("minikeg", "blooddrop", "slim_gold", "white_bloodmoon", "greenroad", "emptyglassbottle", "largeemptyglassbottle", "emptypitcher")
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 250)
+	research_costs = 250

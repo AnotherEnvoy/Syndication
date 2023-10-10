@@ -6,7 +6,7 @@
 	description = "Programmable machines that make our lives lazier."
 	prereq_ids = list("base")
 	design_ids = list("paicard", "drone_shell")
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2000)
+	research_costs = 2000
 
 /datum/techweb_node/mmi
 	id = "mmi"
@@ -29,14 +29,14 @@
 	description = "It can even do the dishes!"
 	prereq_ids = list("robotics")
 	design_ids = list("borg_upgrade_diamonddrill", "borg_upgrade_advancedmop", "borg_upgrade_advcutter", "nanogel")
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 3000)
+	research_costs = 3000
 
 /datum/techweb_node/neural_programming
 	id = "neural_programming"
 	display_name = "Neural Programming"
 	description = "Study into networks of processing units that mimic our brains."
 	prereq_ids = list("biotech", "datatheory")
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
+	research_costs = 2500
 
 /datum/techweb_node/posibrain
 	id = "posibrain"
@@ -44,7 +44,7 @@
 	description = "Applied usage of neural technology allowing for autonomous AI units based on special metallic cubes with conductive and processing circuits."
 	prereq_ids = list("neural_programming")
 	design_ids = list("mmi_posi")
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
+	research_costs = 2500
 
 /datum/techweb_node/cyborg_upg_util
 	id = "cyborg_upg_util"
@@ -52,7 +52,7 @@
 	description = "Utility upgrades for cyborgs."
 	prereq_ids = list("engineering", "robotics")
 	design_ids = list("borg_upgrade_lavaproof", "borg_upgrade_thrusters", "borg_upgrade_selfrepair", "borg_upgrade_expand", "borg_upgrade_rped")
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2000)
+	research_costs = 2000
 
 /datum/techweb_node/cyborg_upg_med
 	id = "cyborg_upg_med"
@@ -60,7 +60,7 @@
 	description = "Medical upgrades for cyborgs."
 	prereq_ids = list("adv_biotech", "robotics")
 	design_ids = list("borg_upgrade_advhealth", "borg_upgrade_piercinghypospray", "borg_upgrade_highstrengthsynthesiser", "borg_upgrade_expandedsynthesiser", "borg_upgrade_pinpointer", "borg_upgrade_surgicalprocessor")
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2000)
+	research_costs = 2000
 
 /datum/techweb_node/cyborg_upg_combat
 	id = "cyborg_upg_combat"
@@ -68,7 +68,7 @@
 	description = "Military grade upgrades for cyborgs."
 	prereq_ids = list("adv_robotics", "adv_engi" , "weaponry")
 	design_ids = list("borg_upgrade_vtec", "borg_upgrade_disablercooler")
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 5000)
+	research_costs = 5000
 
 /datum/techweb_node/ai
 	id = "ai"
@@ -78,4 +78,4 @@
 	design_ids = list("aifixer", "aicore", "safeguard_module", "onehuman_module", "protectstation_module", "quarantine_module", "oxygen_module", "freeform_module",
 	"reset_module", "purge_module", "remove_module", "freeformcore_module", "asimov_module", "paladin_module", "tyrant_module", "corporate_module",
 	"default_module", "borg_ai_control", "mecha_tracking_ai_control", "aiupload", "intellicard")
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
+	research_costs = 2500

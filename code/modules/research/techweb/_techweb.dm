@@ -13,16 +13,16 @@
 	var/list/boosted_nodes = list()			//Already boosted nodes that can't be boosted again. node id = path of boost object.
 	var/list/hidden_nodes = list()			//Hidden nodes. id = TRUE. Used for unhiding nodes when requirements are met by removing the entry of the node.
 	var/list/deconstructed_items = list()						//items already deconstructed for a generic point boost. path = list(point_type = points)
-	var/list/research_points = list()										//Available research points. type = number
 	var/list/obj/machinery/computer/rdconsole/consoles_accessing = list()
 	var/id = "generic"
 	var/list/research_logs = list()								//IC logs.
 	var/largest_values = list()
 	var/organization = "Third-Party"							//Organization name, used for display.
-	var/list/next_income = list()								//To be applied on the next passive techweb income
-	var/list/last_bitcoins = list()								//Current per-second production, used for display only.
 	var/list/discovered_mutations = list()                           //Mutations discovered by genetics, this way they are shared and cant be destroyed by destroying a single console
 	var/list/tiers = list()										//Assoc list, id = number, 1 is available, 2 is all reqs are 1, so on
+	var/datum/bank_account/budget = null    //Syndication: buy research designs instead of unlocking
+	var/next_income = 0
+	var/last_income = 0
 
 /datum/techweb/New()
 	hidden_nodes = SSresearch.techweb_nodes_hidden.Copy()
@@ -40,8 +40,6 @@
 	for(var/i in SSresearch.techweb_nodes)
 		var/datum/techweb_node/TN = SSresearch.techweb_nodes[i]
 		research_node(TN, TRUE)
-	for(var/i in SSresearch.point_types)
-		research_points[i] = INFINITY
 	hidden_nodes = list()
 
 /datum/techweb/syndicate
@@ -63,6 +61,10 @@
 /datum/techweb/science	//Global science techweb for RND consoles.
 	id = "SCIENCE"
 	organization = "Nanotrasen"
+
+/datum/techweb/science/New()
+	budget = SSeconomy.get_dep_account(ACCOUNT_SCI)
+	. = ..()
 
 /datum/techweb/bepis	//Should contain only 1 BEPIS tech selected at random.
 	id = "EXPERIMENTAL"
@@ -106,49 +108,13 @@
 		V.rescan_views()
 		V.updateUsrDialog()
 
-/datum/techweb/proc/add_point_list(list/pointlist, income = TRUE)
-	if(income) // i DO NOT TRUST byond to optimize this way properly
-		for(var/i in pointlist)
-			if(SSresearch.point_types[i] && pointlist[i] > 0)
-				next_income[i] += pointlist[i]
-	else
-		for(var/i in pointlist)
-			if(SSresearch.point_types[i] && pointlist[i] > 0)
-				research_points[i] += pointlist[i]
-
-/datum/techweb/proc/add_points_all(amount)
-	var/list/l = SSresearch.point_types.Copy()
-	for(var/i in l)
-		l[i] = amount
-	add_point_list(l)
+/datum/techweb/proc/modify_points(amount)
+    budget?._adjust_money(amount)
 
 /datum/techweb/proc/commit_income()
-	. = next_income.Copy()
-	add_point_list(next_income, income = FALSE)
-	for(var/i in next_income)
-		next_income[i] = 0
-
-/datum/techweb/proc/remove_point_list(list/pointlist)
-	for(var/i in pointlist)
-		if(SSresearch.point_types[i] && pointlist[i] > 0)
-			research_points[i] = max(0, research_points[i] - pointlist[i])
-
-/datum/techweb/proc/remove_points_all(amount)
-	var/list/l = SSresearch.point_types.Copy()
-	for(var/i in l)
-		l[i] = amount
-	remove_point_list(l)
-
-/datum/techweb/proc/modify_point_list(list/pointlist)
-	for(var/i in pointlist)
-		if(SSresearch.point_types[i] && pointlist[i] != 0)
-			research_points[i] = max(0, research_points[i] + pointlist[i])
-
-/datum/techweb/proc/modify_points_all(amount)
-	var/list/l = SSresearch.point_types.Copy()
-	for(var/i in l)
-		l[i] = amount
-	modify_point_list(l)
+	. = next_income
+	modify_points(next_income)
+	next_income = 0
 
 /datum/techweb/proc/copy_research_to(datum/techweb/receiver, unlock_hidden = TRUE)				//Adds any missing research to theirs.
 	if(unlock_hidden)
@@ -182,30 +148,6 @@
 /datum/techweb/proc/get_researched_nodes()
 	return researched_nodes - hidden_nodes
 
-/datum/techweb/proc/add_point_type(type, amount, income = TRUE)
-	if(!SSresearch.point_types[type] || (amount <= 0))
-		return FALSE
-	if(income)
-		next_income[type] += amount
-	else
-		research_points[type] += amount
-	return TRUE
-
-/datum/techweb/proc/modify_point_type(type, amount, income = TRUE)
-	if(!SSresearch.point_types[type])
-		return FALSE
-	if(income && amount > 0)
-		next_income[type] += amount
-	else
-		research_points[type] = max(0, research_points[type] + amount)
-	return TRUE
-
-/datum/techweb/proc/remove_point_type(type, amount)
-	if(!SSresearch.point_types[type] || (amount <= 0))
-		return FALSE
-	research_points[type] = max(0, research_points[type] - amount)
-	return TRUE
-
 /datum/techweb/proc/add_design_by_id(id, custom = FALSE)
 	return add_design(SSresearch.techweb_design_by_id(id), custom)
 
@@ -229,18 +171,11 @@
 	researched_designs -= design.id
 	return TRUE
 
-/datum/techweb/proc/get_point_total(list/pointlist)
-	for(var/i in pointlist)
-		. += pointlist[i]
-
-/datum/techweb/proc/can_afford(list/pointlist)
-	for(var/i in pointlist)
-		if(research_points[i] < pointlist[i])
-			return FALSE
-	return TRUE
+/datum/techweb/proc/can_afford(amount)
+	return budget?.has_money(amount)
 
 /datum/techweb/proc/printout_points()
-	return techweb_point_display_generic(research_points)
+	return "Credits: [budget?.account_balance]"
 
 /datum/techweb/proc/research_node_id(id, force, auto_update_points)
 	return research_node(SSresearch.techweb_node_by_id(id), force, auto_update_points)
@@ -253,7 +188,7 @@
 		if(!available_nodes[node.id] || (auto_adjust_cost && (!can_afford(node.get_price(src)))))
 			return FALSE
 	if(auto_adjust_cost)
-		remove_point_list(node.get_price(src))
+		modify_points(-node.get_price(src))
 	researched_nodes[node.id] = TRUE				//Add to our researched list
 	for(var/id in node.unlock_ids)
 		visible_nodes[id] = TRUE

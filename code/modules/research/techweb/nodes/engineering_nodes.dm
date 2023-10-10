@@ -9,7 +9,7 @@
 	"atmosalerts", "atmos_control", "recycler", "autolathe", "autolathe_secure", "high_micro_laser", "nano_mani", "mesons", "thermomachine", "rad_collector", "tesla_coil", "grounding_rod",
 	"apc_control", "power control", "airlock_board", "firelock_board", "airalarm_electronics", "firealarm_electronics", "cell_charger", "stack_console", "stack_machine", "rcd_ammo", "oxygen_tank",
 	 "plasma_tank", "emergency_oxygen", "emergency_oxygen_engi", "plasmaman_tank_belt", "colormate", "conveyor_sorter")
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 6000)
+	research_costs = 6000
 
 /datum/techweb_node/adv_engi
 	id = "adv_engi"
@@ -18,7 +18,7 @@
 	prereq_ids = list("engineering", "emp_basic")
 	design_ids = list("engine_goggles", "magboots", "forcefield_projector", "weldingmask" , "rcd_loaded", "rpd",
 	"rcd_upgrade_frames", "rcd_upgrade_simple_circuits", "rcd_ammo_large", "sheetifier")
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 4000)
+	research_costs = 4000
 
 /datum/techweb_node/anomaly
 	id = "anomaly_research"
@@ -26,7 +26,7 @@
 	description = "Unlock the potential of the mysterious anomalies that appear on station."
 	prereq_ids = list("adv_engi", "practical_bluespace")
 	design_ids = list("reactive_armour", "anomaly_neutralizer", "explosive_compressor")
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 3500)
+	research_costs = 3500
 
 /datum/techweb_node/high_efficiency
 	id = "high_efficiency"
@@ -34,7 +34,7 @@
 	description = "Finely-tooled manufacturing techniques allowing for picometer-perfect precision levels."
 	prereq_ids = list("engineering", "datatheory")
 	design_ids = list("pico_mani", "super_matter_bin")
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 5000)
+	research_costs = 5000
 
 /datum/techweb_node/adv_power
 	id = "adv_power"
@@ -42,7 +42,7 @@
 	description = "How to get more zap."
 	prereq_ids = list("engineering")
 	design_ids = list("smes", "super_cell", "hyper_cell", "super_capacitor", "superpacman", "mrspacman", "power_turbine", "power_turbine_console", "power_compressor", "circulator", "teg")
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 3000)
+	research_costs = 3000
 
 /*
 /datum/techweb_node/basic_meteor_defense
