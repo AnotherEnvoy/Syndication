@@ -88,6 +88,12 @@
 	SSresearch.techwebs -= src
 	return ..()
 
+/datum/techweb/proc/update_console_dialogs()
+	for(var/v in consoles_accessing)
+		var/obj/machinery/computer/rdconsole/V = v
+		V.rescan_views()
+		V.updateUsrDialog()
+
 /datum/techweb/proc/recalculate_nodes(recalculate_designs = FALSE, wipe_custom_designs = FALSE)
 	var/list/datum/techweb_node/processing = list()
 	for(var/id in researched_nodes)
@@ -103,10 +109,7 @@
 	for(var/id in processing)
 		update_node_status(SSresearch.techweb_node_by_id(id), FALSE)
 		CHECK_TICK
-	for(var/v in consoles_accessing)
-		var/obj/machinery/computer/rdconsole/V = v
-		V.rescan_views()
-		V.updateUsrDialog()
+	update_console_dialogs()
 
 /datum/techweb/proc/modify_points(amount)
     budget?._adjust_money(amount)
@@ -183,7 +186,7 @@
 /datum/techweb/proc/research_node(datum/techweb_node/node, force = FALSE, auto_adjust_cost = TRUE)
 	if(!istype(node))
 		return FALSE
-	update_node_status(node)
+	update_node_status(node, FALSE)
 	if(!force)
 		if(!available_nodes[node.id] || (auto_adjust_cost && (!can_afford(node.get_price(src)))))
 			return FALSE
@@ -192,7 +195,7 @@
 	researched_nodes[node.id] = TRUE				//Add to our researched list
 	for(var/id in node.unlock_ids)
 		visible_nodes[id] = TRUE
-		update_node_status(SSresearch.techweb_node_by_id(id))
+		update_node_status(SSresearch.techweb_node_by_id(id), FALSE)
 	for(var/id in node.design_ids)
 		add_design_by_id(id)
 	update_node_status(node)
@@ -270,10 +273,7 @@
 				visible_nodes[node.id] = TRUE
 	update_tiers(node)
 	if(autoupdate_consoles)
-		for(var/v in consoles_accessing)
-			var/obj/machinery/computer/rdconsole/V = v
-			V.rescan_views()
-			V.updateUsrDialog()
+		update_console_dialogs()
 
 //Laggy procs to do specific checks, just in case. Don't use them if you can just use the vars that already store all this!
 /datum/techweb/proc/designHasReqs(datum/design/D)
