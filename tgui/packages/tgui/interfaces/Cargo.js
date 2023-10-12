@@ -41,7 +41,7 @@ export const CargoContent = (props, context) => {
             icon="envelope"
             textColor={tab !== 'requests'
               && requests.length > 0
-              && 'yellow'}
+              && 'red'}
             selected={tab === 'requests'}
             onClick={() => setTab('requests')}>
             Requests ({requests.length})
@@ -51,7 +51,7 @@ export const CargoContent = (props, context) => {
               icon="shopping-cart"
               textColor={tab !== 'cart'
                 && cart.length > 0
-                && 'yellow'}
+                && 'red'}
               selected={tab === 'cart'}
               onClick={() => setTab('cart')}>
               Checkout ({cart.length})
@@ -101,6 +101,7 @@ const CargoStatus = (props, context) => {
           {docked && !requestonly && can_send &&(
             <Button
               content={location}
+			  color = red
               onClick={() => act('send')} />
           ) || location}
         </LabeledList.Item>
@@ -112,6 +113,7 @@ const CargoStatus = (props, context) => {
             {!loan_dispatched && (
               <Button
                 content="Loan Shuttle"
+				color = red
                 disabled={!(away && docked)}
                 onClick={() => act('loan')} />
             ) || (
@@ -232,6 +234,7 @@ const CargoRequests = (props, context) => {
       buttons={!requestonly && (
         <Button
           icon="times"
+		  color = red
           content="Clear"
           color="transparent"
           onClick={() => act('denyall')} />
@@ -374,7 +377,7 @@ const CargoCart = (props, context) => {
         <Box mt={2}>
           {away === 1 && docked === 1 && (
             <Button
-              color="green"
+              color="red"
               style={{
                 'line-height': '28px',
                 'padding': '0 12px',
