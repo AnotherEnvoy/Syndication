@@ -50,6 +50,48 @@ Nothing else in the console has ID requirements.
 	/// Long action cooldown to prevent spam
 	var/last_long_action = 0
 
+/obj/machinery/computer/rdconsole/ui_static_data(mob/user)
+	var/list/data = list()
+	var/list/nodes = list()
+	for(var/id in SSresearch.techweb_nodes)
+		var/list/nodedata = list()
+		var/datum/techweb_node/node = SSresearch.techweb_nodes[id]
+		nodedata["name"] = node.display_name
+		nodedata["description"] = node.description
+		nodedata["prereq_ids"] = node.prereq_ids
+		nodedata["design_ids"] = node.design_ids
+		nodedata["unlock_ids"] = node.unlock_ids
+		nodedata["category"] = node.category
+		nodedata["cost"] = node.research_costs
+		nodes[id] = nodedata
+	data["nodes"] = nodes
+	var/list/designs = list()
+	var/datum/asset/spritesheet/icons = get_asset_datum(/datum/asset/spritesheet/research_designs)
+	for(var/id in SSresearch.techweb_designs)
+		var/list/designdata = list()
+		var/datum/design/design = SSresearch.techweb_designs[id]
+		designdata["name"] = design.name
+		designdata["icon"] = icons.icon_class_name(id)
+		designs[id] = designdata
+	data["designs"] = designs
+	return data
+
+/obj/machinery/computer/rdconsole/ui_data(mob/user)
+	var/list/data = list()
+	data["credits"] = stored_research.budget.account_balance
+	data["visible_nodes"] = stored_research.visible_nodes
+	data["researched_nodes"] = stored_research.researched_nodes
+	data["available_nodes"] = stored_research.available_nodes
+	return data
+
+/obj/machinery/computer/rdconsole/ui_act(action, params)
+	. = ..()
+	if(.)
+		return
+	if(action == "research")
+		research_node(params["nodeID"], usr)
+	return TRUE
+
 /obj/machinery/computer/rdconsole/production
 	circuit = /obj/item/circuitboard/computer/rdconsole/production
 	research_control = FALSE
@@ -850,7 +892,7 @@ Nothing else in the console has ID requirements.
 	. = ui.Join("")
 	return replacetextEx(., RDSCREEN_NOBREAK, "")
 
-/obj/machinery/computer/rdconsole/Topic(raw, ls)
+/*/obj/machinery/computer/rdconsole/Topic(raw, ls)
 	if(..())
 		return
 	add_fingerprint(usr)
@@ -1070,18 +1112,21 @@ Nothing else in the console has ID requirements.
 					stored_research.add_design(D, TRUE)
 		else
 			stored_research.add_design(d_disk.blueprints[n], TRUE)
+	updateUsrDialog()*/
 
-	updateUsrDialog()
-
-/obj/machinery/computer/rdconsole/ui_interact(mob/user)
-	. = ..()
-	var/datum/browser/popup = new(user, "rndconsole", name, 900, 600)
+/obj/machinery/computer/rdconsole/ui_interact(mob/user, datum/tgui/ui = null)
+	/*var/datum/browser/popup = new(user, "rndconsole", name, 900, 600)
 	var/datum/asset/spritesheet/assets = get_asset_datum(/datum/asset/spritesheet/research_designs)
 
 	popup.add_head_content("<link rel='stylesheet' type='text/css' href='[assets.css_tag()]'>")
 	popup.add_stylesheet("techwebs", 'html/browser/techwebs.css')
 	popup.set_content(generate_ui())
-	popup.open()
+	popup.open()*/
+	ui = SStgui.try_update_ui(user, src, ui)
+	if(!ui)
+		ui = new(user, src, "RDConsole")
+		ui.open()
+		ui.send_asset(get_asset_datum(/datum/asset/spritesheet/research_designs))
 
 /obj/machinery/computer/rdconsole/proc/tdisk_uple_complete()
 	tdisk_uple = FALSE
