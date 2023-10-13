@@ -1,12 +1,12 @@
 import { useBackend, useLocalState } from '../backend'
 import { Window } from '../layouts'
-import { Box, Collapsible, Flex, Button, Tooltip, Section} from '../components'
+import { Box, Flex, Button, Tooltip, Section} from '../components'
 
 export const RDConsole = (props, context) => {
   const [page] = useLocalState(context, "page", Page.Home)
   return (
-    <Window title="R&D Console" width="2000">
-      <Window.Content scrollable>
+    <Window title="R&D Console" width="2000" height="1000">
+      <Window.Content scrollable fitted>
         <TopBar/>
         {getPageUI(page)}
       </Window.Content>
@@ -63,7 +63,7 @@ const TopBar = (props, context) => {
   const {data} = useBackend(context)
   const [_, setPage] = useLocalState(context, "page", Page.Home)
   return (
-    <Flex>
+    <Flex mb="1em" backgroundColor="rgba(0,70,0,0.4)" p="1em">
       <Flex.Item><Button icon="home" mr="1em" onClick={() => setPage(Page.Home)}/></Flex.Item>
       <Flex.Item><Button icon="cog" onClick={() => setPage(Page.Link)}/></Flex.Item>
       <Flex.Item textAlign="center" grow={1}>Last Action: {data.research_logs.length > 0 ? data.research_logs[data.research_logs.length - 1] : "None"}</Flex.Item>
@@ -99,7 +99,7 @@ const RelatedPage = (props, context) => {
       <Box width="30vw" bold inline textAlign="center">Unlocks</Box>
       <Box mt="0.5em">
         {nodesToStack(Array.isArray(node.prereq_ids) ? node.prereq_ids : Object.keys(node.prereq_ids), "30vw", true)}
-        <Box width="30vw" inline ml="1em"><ResearchCard nodeID={nodeID} showResearchStatus/></Box>
+        {nodesToStack([nodeID], "30vw", true)}
         {nodesToStack(Array.isArray(node.unlock_ids) ? node.unlock_ids : Object.keys(node.unlock_ids), "30vw", true)}
       </Box>
     </Box>
@@ -156,25 +156,22 @@ const ResearchCard = (props, context) => {
   const node = data.nodes[nodeID]
   const [_, setPage] = useLocalState(context, "page", Page.Home)
   return (
-    <Box backgroundColor="rgba(70,0,0,0.8)" width="inherit" style={{outline: "2px solid rgba(0,0,0,0.2)"}}>
-      <Collapsible title={node.name} color="none" buttons={showResearchStatus && (<ResearchStatus nodeID={nodeID}/>)}>
-        <Box ml="1em">
-          {node.description}
-          <Flex wrap="wrap" align="center">
-            <Flex.Item>
-              <Button onClick={() => setPage(nodeID)}>
-                Related
-              </Button>
-            </Flex.Item>
-            {Object.keys(node.design_ids).map(id => (
-            <Flex.Item>
-              <Tooltip content={data.designs[id].name}>
-                <span class={data.designs[id].icon}/>
-              </Tooltip>
-            </Flex.Item>))}
-          </Flex>
-        </Box>
-      </Collapsible>
-    </Box>
+    <Section mt="1em" title={node.name} buttons={
+      <Box>
+        <Button mr="0.5em" onClick={() => setPage(nodeID)}>Related</Button>
+        {showResearchStatus && <ResearchStatus nodeID={nodeID}/>}
+      </Box>}>
+      <Box ml="1em">
+        {node.description}
+        <Flex wrap="wrap" align="center" mt="0.5em">
+          {Object.keys(node.design_ids).map(id => (
+          <Flex.Item>
+            <Tooltip content={data.designs[id].name}>
+              <span class={data.designs[id].icon}/>
+            </Tooltip>
+          </Flex.Item>))}
+        </Flex>
+      </Box>
+    </Section>
   )
 }
