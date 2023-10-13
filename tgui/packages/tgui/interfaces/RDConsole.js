@@ -1,6 +1,18 @@
-import { useBackend, useLocalState } from '../backend';
-import { Window } from '../layouts';
-import { Box, Collapsible, Flex, Button, Tooltip, Section, Divider} from '../components';
+import { useBackend, useLocalState } from '../backend'
+import { Window } from '../layouts'
+import { Box, Collapsible, Flex, Button, Tooltip, Section} from '../components'
+
+export const RDConsole = (props, context) => {
+  const [page] = useLocalState(context, "page", Page.Home)
+  return (
+    <Window title="R&D Console" width="2000">
+      <Window.Content scrollable>
+        <TopBar/>
+        {getPageUI(page)}
+      </Window.Content>
+    </Window>
+  )
+}
 
 function removeFromSet(set, toRemove) {
   for(const elem of toRemove) {
@@ -24,18 +36,18 @@ const Page = {
   Link: 'PAGE_LINK'
 }
 
-function GetPageUI(page) {
+function getPageUI(page) {
   if(page === Page.Home) {
-    return <HomePage/>;
+    return <HomePage/>
   }
   if(page == Page.Link) {
-    return "unimplimented";
+    return <LinkPage/>
   }
-  return <RelatedPage nodeID={page}/>;
+  return <RelatedPage nodeID={page}/>
 }
 
 function getLists(context) {
-  const { data } = useBackend(context);
+  const { data } = useBackend(context)
   let researched = Object.keys(data.researched_nodes)
   let available = new Set(Object.keys(data.available_nodes))
   removeFromSet(available, researched)
@@ -47,26 +59,15 @@ function getLists(context) {
   return {researched: researched, available: available, future: future}
 }
 
-export const RDConsole = (props, context) => {
-  const [page] = useLocalState(context, "page", Page.Home)
-  return (
-    <Window resizable title="R&D Console" width="2000">
-      <Window.Content scrollable>
-        <TopBar/>
-        {GetPageUI(page)}
-      </Window.Content>
-    </Window>
-  );
-};
-
 const TopBar = (props, context) => {
-  const {data} = useBackend(context);
+  const {data} = useBackend(context)
   const [_, setPage] = useLocalState(context, "page", Page.Home)
   return (
     <Flex>
       <Flex.Item><Button icon="home" mr="1em" onClick={() => setPage(Page.Home)}/></Flex.Item>
       <Flex.Item><Button icon="cog" onClick={() => setPage(Page.Link)}/></Flex.Item>
-      <Flex.Item textAlign="right" grow={1} bold>Available: {data.credits}¢</Flex.Item>
+      <Flex.Item textAlign="center" grow={1}>Last Action: {data.research_logs.length > 0 ? data.research_logs[data.research_logs.length - 1] : "None"}</Flex.Item>
+      <Flex.Item bold>Available: {data.credits}¢</Flex.Item>
     </Flex>
   )
 }
@@ -88,9 +89,9 @@ const HomePage = (props, context) => {
 }
 
 const RelatedPage = (props, context) => {
-  const { data } = useBackend(context);
-  const {nodeID} = props;
-  const node = data.nodes[nodeID];
+  const { data } = useBackend(context)
+  const {nodeID} = props
+  const node = data.nodes[nodeID]
   return (
     <Box>
       <Box width="30vw" bold inline textAlign="center">Prerequisites</Box>
@@ -105,19 +106,48 @@ const RelatedPage = (props, context) => {
   )
 }
 
+const LinkPage = (props, context) => {
+  const { act, data } = useBackend(context)
+  const { has_lathe, has_destroy, has_imprinter } = data
+  let list_items = []
+  if(has_lathe) {
+    list_items.push(<li>Protolathe <Button onClick={() => act("disconnect", {device: "lathe"})}>Disconnect</Button></li>)
+  }
+  if(has_destroy) {
+    list_items.push(<li>Destructive Analyzer <Button onClick={() => act("disconnect", {device: "destroy"})}>Disconnect</Button></li>)
+  }
+  if(has_imprinter) {
+    list_items.push(<li>Circuit Imprinter <Button onClick={() => act("disconnect", {device: "imprinter"})}>Disconnect</Button></li>)
+  }
+  return (
+    <Box mt="1em">
+      <Section title="Connected Devices" buttons={<Button onClick={() => act("sync")}>Resync Devices</Button>}>
+        <ul>
+          {list_items}
+        </ul>
+      </Section>
+      <Section title="Logs">
+        <ul>
+          {data.research_logs.slice(0).reverse().map(log => <li>{log}</li>)}
+        </ul>
+      </Section>
+    </Box>
+  )
+}
+
 const ResearchStatus = (props, context) => {
-  const {act, data} = useBackend(context);
-  const {nodeID} = props;
+  const {act, data} = useBackend(context)
+  const {nodeID} = props
   const node = data.nodes[nodeID]
   if(data.researched_nodes[nodeID] != undefined) {
-    return <Button disabled>Researched</Button>;
+    return <Button disabled>Researched</Button>
   }
   if(data.available_nodes[nodeID] == undefined) {
-    return <Button disabled>Locked</Button>;
+    return <Button disabled>Locked</Button>
   }
   return <Button disabled={data.credits < node.cost} onClick={() => act("research", {nodeID: nodeID})}>
             Purchase ({node.cost}¢)
-         </Button>;
+         </Button>
 }
 
 const ResearchCard = (props, context) => {
