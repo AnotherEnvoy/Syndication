@@ -6,7 +6,7 @@
 // from everything anyway
 
 /area/centcom
-	name = "CentCom"
+	name = "Cybersun"
 	icon_state = "centcom"
 	dynamic_lighting = DYNAMIC_LIGHTING_FORCED
 	requires_power = FALSE

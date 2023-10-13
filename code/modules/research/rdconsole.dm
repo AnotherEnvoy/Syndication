@@ -15,7 +15,7 @@ Nothing else in the console has ID requirements.
 
 */
 /obj/machinery/computer/rdconsole
-	name = "R&D Console"
+	name = "Research Trading Console"
 	desc = "A console used to interface with R&D tools."
 	icon_screen = "rdcomp"
 	icon_keyboard = "rd_key"
@@ -197,7 +197,7 @@ Nothing else in the console has ID requirements.
 		if(stored_research == SSresearch.science_tech)
 			SSblackbox.record_feedback("associative", "science_techweb_unlock", 1, list("id" = "[id]", "name" = TN.display_name, "price" = "[json_encode(price)]", "time" = SQLtime()))
 		if(stored_research.research_node_id(id))
-			say("Successfully researched [TN.display_name].")
+			say("Successfully purchased [TN.display_name].")
 			var/logname = "Unknown"
 			if(isAI(user))
 				logname = "AI: [user.name]"
@@ -206,12 +206,12 @@ Nothing else in the console has ID requirements.
 			else if(isliving(user))
 				var/mob/living/L = user
 				logname = L.get_visible_name()
-			stored_research.research_logs += "[logname] researched node id [id] with cost [json_encode(price)] at [COORD(src)]."
+			stored_research.research_logs += "[logname] purchased node id [id] with cost [json_encode(price)] at [COORD(src)]."
 			return TRUE
 		else
 			say("Failed to research node: Internal database error!")
 			return FALSE
-	say("Not enough research points...")
+	say("Not enough credits...")
 	return FALSE
 
 /obj/machinery/computer/rdconsole/on_deconstruction()
@@ -294,7 +294,7 @@ Nothing else in the console has ID requirements.
 
 /obj/machinery/computer/rdconsole/proc/ui_settings()
 	var/list/l = list()
-	l += "<div class='statusDisplay'><h3>R&D Console Settings:</h3>"
+	l += "<div class='statusDisplay'><h3>Research Trading Console Settings:</h3>"
 	l += "<A href='?src=[REF(src)];switch_screen=[RDSCREEN_DEVICE_LINKING]'>Device Linkage Menu</A>"
 	l += "<A href='?src=[REF(src)];lock_console=1'>Lock Console</A></div>"
 	return l
@@ -302,7 +302,7 @@ Nothing else in the console has ID requirements.
 /obj/machinery/computer/rdconsole/proc/ui_device_linking()
 	var/list/l = list()
 	l += "<A href='?src=[REF(src)];switch_screen=[RDSCREEN_SETTINGS]'>Settings Menu</A><div class='statusDisplay'>"
-	l += "<h3>R&D Console Device Linkage Menu:</h3>"
+	l += "<h3>Research Trading Console Device Linkage Menu:</h3>"
 	l += "<A href='?src=[REF(src)];find_device=1'>Re-sync with Nearby Devices</A>"
 	l += "<h3>Linked Devices:</h3>"
 	l += linked_destroy? "* Destructive Analyzer <A href='?src=[REF(src)];disconnect=destroy'>Disconnect</A>" : "* No Destructive Analyzer Linked"
@@ -1185,18 +1185,18 @@ Nothing else in the console has ID requirements.
 	locked = FALSE
 
 /obj/machinery/computer/rdconsole/robotics
-	name = "Robotics R&D Console"
+	name = "Robotics Research Trading Console"
 	req_access = null
 	req_access_txt = "29"
 
 /obj/machinery/computer/rdconsole/robotics/Initialize(mapload)
 	. = ..()
 	if(circuit)
-		circuit.name = "R&D Console - Robotics (Computer Board)"
+		circuit.name = "Research Trading Console - Robotics (Computer Board)"
 		circuit.build_path = /obj/machinery/computer/rdconsole/robotics
 
 /obj/machinery/computer/rdconsole/core
-	name = "Core R&D Console"
+	name = "Research Trading Console"
 
 /obj/machinery/computer/rdconsole/experiment
 	name = "E.X.P.E.R.I-MENTOR R&D Console"
