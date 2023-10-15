@@ -238,6 +238,23 @@
 	contains = list(/obj/item/raw_anomaly_core/pyro)
 	crate_name = "raw pyro anomaly"
 	crate_type = /obj/structure/closet/crate/secure/science
+	
+/datum/supply_pack/science/syndicate_mod_suit
+	name = "Syndicate MODsuit"
+	desc = "A standard MODsuit designed by Gorlex Marauders. Armor Booster sold separately."
+	cost = 10000
+	contains = list(/obj/item/mod/control/pre_equipped/traitor)
+	crate_name = "gorlex MOD crate"
+	crate_type = /obj/structure/closet/crate/secure/gear
+	
+/datum/supply_pack/science/elite_mod_suit
+	name = "Elite Syndicate MODsuit"
+	desc = "An elite MODsuit reserved for special individuals designed by Cybersun. Modules have been removed by Donk. Requires Bridge access."
+	access = ACCESS_HEADS
+	cost = 100000
+	contains = list(/obj/item/mod/control/pre_equipped/syndicate_empty/elite )
+	crate_name = "cybersun MOD crate"
+	crate_type = /obj/structure/closet/crate/secure/gear
 
 /datum/supply_pack/science/mod_core
 	name = "MOD core Crate"
