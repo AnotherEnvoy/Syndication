@@ -63,6 +63,13 @@
 	ammo_type = /obj/item/ammo_casing/c45
 	caliber = ".45"
 	max_ammo = 24
+	
+/obj/item/ammo_box/magazine/smgm45stun
+	name = "SMG magazine (.45 Stun)"
+	icon_state = "c20r45-24"
+	ammo_type = /obj/item/ammo_casing/c45/stun 
+	caliber = ".45"
+	max_ammo = 24
 
 /obj/item/ammo_box/magazine/smgm45/update_icon()
 	..()

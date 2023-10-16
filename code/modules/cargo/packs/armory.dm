@@ -247,32 +247,32 @@
 	crate_name = "swat crate"
 
 /datum/supply_pack/security/armory/wt550
-	name = "WT-550 Semi-Auto Rifle Crate"
-	desc = "Contains two high-powered, semiautomatic rifles chambered in 4.6x30mm. Requires Armory access to open."
+	name = "C-20r SMG Crate"
+	desc = "Contains two high-powered, bullpup submachine guns chambered in .45. Requires Armory access to open."
 	cost = 2550
-	contains = list(/obj/item/gun/ballistic/automatic/wt550,
-					/obj/item/gun/ballistic/automatic/wt550)
-	crate_name = "auto rifle crate"
+	contains = list(/obj/item/gun/ballistic/automatic/c20r,
+					/obj/item/gun/ballistic/automatic/c20r)
+	crate_name = "smg crate"
 
 /datum/supply_pack/security/armory/wt550ammo
 	name = "WT-550 Semi-Auto SMG Ammo Crate"
-	desc = "Contains four 32-round magazines for the WT-550 Semi-Auto SMG. Each magazine is designed to facilitate rapid tactical reloads. Requires Armory access to open."
+	desc = "Contains four 24-round magazines for the C-20r SMG. Requires Armory access to open."
 	cost = 1750
-	contains = list(/obj/item/ammo_box/magazine/wt550m9,
-					/obj/item/ammo_box/magazine/wt550m9,
-					/obj/item/ammo_box/magazine/wt550m9,
-					/obj/item/ammo_box/magazine/wt550m9)
-	crate_name = "auto rifle ammo crate"
+	contains = list(/obj/item/ammo_box/magazine/smgm45,
+					/obj/item/ammo_box/magazine/smgm45,
+					/obj/item/ammo_box/magazine/smgm45,
+					/obj/item/ammo_box/magazine/smgm45)
+	crate_name = "smg ammo crate"
 
 /datum/supply_pack/security/armory/wt550ammo_nonlethal // Takes around 12 shots to stamcrit someone
-	name = "WT-550 Semi-Auto SMG Non-Lethal Ammo Crate"
-	desc = "Contains four 32-round magazines for the WT-550 Semi-Auto SMG. Each magazine is designed to facilitate rapid tactical reloads. Requires Armory access to open."
+	name = "C-20r SMG Stun Ammo Crate"
+	desc = "Contains four 24-round magazines for the C-20r SMG. Requires Armory access to open."
 	cost = 1000
-	contains = list(/obj/item/ammo_box/magazine/wt550m9/wtrubber,
-					/obj/item/ammo_box/magazine/wt550m9/wtrubber,
-					/obj/item/ammo_box/magazine/wt550m9/wtrubber,
-					/obj/item/ammo_box/magazine/wt550m9/wtrubber)
-	crate_name = "auto rifle ammo crate"
+	contains = list(/obj/item/ammo_box/magazine/smgm45stun,
+					/obj/item/ammo_box/magazine/smgm45stun,
+					/obj/item/ammo_box/magazine/smgm45stun,
+					/obj/item/ammo_box/magazine/smgm45stun)
+	crate_name = "smg ammo crate"
 
 /datum/supply_pack/security/armory/hell_single
 	name = "Hellgun Single-Pack"

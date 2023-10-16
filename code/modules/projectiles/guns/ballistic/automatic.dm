@@ -71,7 +71,7 @@
 	desc = "A bullpup two-round burst .45 SMG, designated 'C-20r'. Has a 'Scarborough Arms - Per falcis, per pravitas' buttstamp."
 	icon_state = "c20r"
 	item_state = "c20r"
-	mag_type = /obj/item/ammo_box/magazine/smgm45
+	mag_type = /obj/item/ammo_box/magazine/smgm45stun
 	fire_sound = 'sound/weapons/gunshot_smg.ogg'
 	burst_shot_delay = 2
 	burst_size = 2
