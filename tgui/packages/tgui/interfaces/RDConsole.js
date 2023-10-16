@@ -82,7 +82,7 @@ function arraySetOverlap(arr, set) {
 function performSearch(context, search) {
   const {data} = useBackend(context)
   if(search.text === "")
-    return data.nodes
+    return Object.keys(data.nodes)
   let filteredDesigns = new Set()
   let filteredNodes = []
   if(search.type == "designs")
