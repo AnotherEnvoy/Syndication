@@ -20,7 +20,7 @@
 	flight_x_offset = 18
 	flight_y_offset = 14
 	obj_flags = UNIQUE_RENAME
-
+	
 	unique_reskin = list(
 		"Default" = list("icon_state" = "enforcer_black"),
 		"M2611 Enforcer" = list("icon_state" = "cde"),
@@ -28,12 +28,28 @@
 		"VP78 Enforcer" = list("icon_state" = "vp78"),
 		"USP Enforcer" = list("icon_state" = "usp-m")
 	)
-
+	
 /obj/item/gun/ballistic/automatic/pistol/enforcer/update_icon_state()
 	if(current_skin)
 		icon_state = "[unique_reskin[current_skin]["icon_state"]][chambered ? "" : "-e"]"
 	else
 		icon_state = "[initial(icon_state)][chambered ? "" : "-e"]"
+	
+/obj/item/gun/ballistic/automatic/pistol/mira45
+	name = "\improper M45"
+	desc = "A longer, thinner stetchkin made by MIRADYNE. (.45)"
+	icon = 'modular_splurt/icons/obj/guns/projectile.dmi'
+	icon_state = "mira45"
+	w_class = WEIGHT_CLASS_NORMAL
+	mag_type = /obj/item/ammo_box/magazine/mi45/rubber
+	can_suppress = FALSE
+	can_flashlight = 0
+	flight_x_offset = 18
+	flight_y_offset = 14
+	obj_flags = UNIQUE_RENAME
+	
+/obj/item/gun/ballistic/automatic/pistol/mira45/update_icon_state()
+	icon_state = "[initial(icon_state)][chambered ? "" : "-e"]"
 
 /obj/item/gun/ballistic/automatic/pistol/enforcer/nomag
 	spawnwithmagazine = FALSE

@@ -32,6 +32,30 @@
 	desc = "A gun magazine. Loaded with rounds which inject the target with a variety of illegal substances to induce sleep in the target."
 	ammo_type = /obj/item/ammo_casing/c10mm/soporific
 
+/obj/item/ammo_box/magazine/mi45/rubber
+	name = "pistol magazine (Rubber .45)"
+	desc = "A gun magazine."
+	icon_state = "9x19p"
+	ammo_type = /obj/item/ammo_casing/c45
+	caliber = ".45"
+	max_ammo = 12
+	
+/obj/item/ammo_box/magazine/mi45/lethal
+	name = "pistol magazine (Lethal .45)"
+	desc = "A gun magazine."
+	icon_state = "9x19p"
+	ammo_type = /obj/item/ammo_casing/c45/lethal
+	caliber = ".45"
+	max_ammo = 12
+
+/obj/item/ammo_box/magazine/mi45/taser
+	name = "pistol magazine (Taser .45)"
+	desc = "A gun magazine."
+	icon_state = "9x19p"
+	ammo_type = /obj/item/ammo_casing/c45/taser
+	caliber = ".45"
+	max_ammo = 12
+
 /obj/item/ammo_box/magazine/m45
 	name = "handgun magazine (.45)"
 	icon_state = "45-8"

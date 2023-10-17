@@ -75,7 +75,7 @@
 	fire_sound = 'sound/weapons/gunshot_smg.ogg'
 	burst_shot_delay = 2
 	burst_size = 2
-	pin = /obj/item/firing_pin/implant/pindicate
+	pin = /obj/item/firing_pin
 	can_bayonet = TRUE
 	knife_x_offset = 26
 	knife_y_offset = 12
