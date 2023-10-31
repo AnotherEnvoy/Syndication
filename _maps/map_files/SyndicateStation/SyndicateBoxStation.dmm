@@ -24498,12 +24498,6 @@
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
-/obj/structure/closet,
-/obj/item/mod/control/pre_equipped/syndicate_empty,
-/obj/item/mod/control/pre_equipped/syndicate_empty,
-/obj/item/mod/control/pre_equipped/syndicate_empty,
-/obj/item/mod/control/pre_equipped/syndicate_empty,
-/obj/item/mod/control/pre_equipped/syndicate_empty,
 /turf/open/floor/mineral/plastitanium,
 /area/science/robotics/lab)
 "blz" = (
@@ -26021,12 +26015,6 @@
 	dir = 4
 	},
 /obj/item/clothing/under/rank/captain/parade,
-/obj/item/mod/control/pre_equipped/syndicate_empty/elite,
-/obj/item/mod/control/pre_equipped/syndicate_empty/elite,
-/obj/item/mod/control/pre_equipped/syndicate_empty/elite,
-/obj/item/mod/control/pre_equipped/syndicate_empty/elite,
-/obj/item/mod/control/pre_equipped/syndicate_empty/elite,
-/obj/item/mod/control/pre_equipped/syndicate_empty/elite,
 /turf/open/floor/carpet/black,
 /area/command/heads_quarters/captain)
 "bpl" = (
