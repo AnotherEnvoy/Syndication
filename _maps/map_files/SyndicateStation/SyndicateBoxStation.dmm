@@ -1744,8 +1744,6 @@
 	pixel_y = 4
 	},
 /obj/structure/table/wood,
-/obj/item/uplink,
-/obj/item/stack/telecrystal/twenty,
 /turf/open/floor/mineral/plastitanium/red,
 /area/command/heads_quarters/hos)
 "aev" = (
@@ -1772,26 +1770,6 @@
 	pixel_x = -26
 	},
 /obj/effect/turf_decal/bot,
-/obj/item/ammo_box/magazine/smgm45,
-/obj/item/ammo_box/magazine/smgm45,
-/obj/item/ammo_box/magazine/smgm45,
-/obj/item/ammo_box/magazine/smgm45,
-/obj/item/ammo_box/magazine/smgm45,
-/obj/item/ammo_box/magazine/smgm45,
-/obj/item/ammo_box/magazine/smgm45,
-/obj/item/ammo_box/magazine/smgm45,
-/obj/item/ammo_box/magazine/smgm45,
-/obj/item/ammo_box/magazine/smgm45,
-/obj/item/ammo_box/magazine/smgm45,
-/obj/item/ammo_box/magazine/smgm45,
-/obj/item/ammo_box/magazine/smgm45,
-/obj/item/ammo_box/magazine/smgm45,
-/obj/item/ammo_box/magazine/smgm45,
-/obj/item/ammo_box/magazine/smgm45,
-/obj/item/ammo_box/magazine/smgm45,
-/obj/item/ammo_box/magazine/smgm45,
-/obj/item/ammo_box/magazine/smgm45,
-/obj/item/ammo_box/magazine/smgm45,
 /obj/item/ammo_box/magazine/smgm45,
 /obj/item/ammo_box/magazine/smgm45,
 /obj/item/ammo_box/magazine/smgm45,
@@ -1869,35 +1847,10 @@
 /obj/item/grenade/barrier,
 /obj/item/grenade/barrier,
 /obj/item/grenade/barrier,
-/obj/item/firing_pin,
-/obj/item/firing_pin,
-/obj/item/firing_pin,
-/obj/item/firing_pin,
-/obj/item/firing_pin,
-/obj/item/firing_pin,
-/obj/item/firing_pin,
-/obj/item/firing_pin,
-/obj/item/firing_pin,
-/obj/item/firing_pin,
-/obj/item/firing_pin,
-/obj/item/firing_pin,
-/obj/item/firing_pin,
-/obj/item/firing_pin,
-/obj/item/firing_pin,
-/obj/item/firing_pin,
-/obj/item/firing_pin,
-/obj/item/firing_pin,
-/obj/item/firing_pin,
-/obj/item/firing_pin,
-/obj/item/firing_pin,
-/obj/item/firing_pin,
-/obj/item/firing_pin,
-/obj/item/firing_pin,
-/obj/item/firing_pin,
-/obj/item/firing_pin,
-/obj/item/firing_pin,
-/obj/item/firing_pin,
-/obj/item/firing_pin,
+/obj/item/storage/box/firingpins,
+/obj/item/storage/box/firingpins,
+/obj/item/storage/box/firingpins,
+/obj/item/storage/box/firingpins,
 /turf/open/floor/mineral/plastitanium/red,
 /area/ai_monitored/security/armory)
 "aeG" = (
@@ -2239,6 +2192,8 @@
 	},
 /obj/structure/closet/secure_closet/hos,
 /obj/effect/turf_decal/bot,
+/obj/item/implant/uplink,
+/obj/item/stack/telecrystal/twenty,
 /turf/open/floor/mineral/plastitanium/red,
 /area/command/heads_quarters/hos)
 "afu" = (
@@ -2742,21 +2697,6 @@
 /obj/item/gun/ballistic/automatic/c20r,
 /obj/item/gun/ballistic/automatic/c20r,
 /obj/item/gun/ballistic/automatic/c20r,
-/obj/item/ammo_box/magazine/smgm45stun,
-/obj/item/ammo_box/magazine/smgm45stun,
-/obj/item/ammo_box/magazine/smgm45stun,
-/obj/item/ammo_box/magazine/smgm45stun,
-/obj/item/ammo_box/magazine/smgm45stun,
-/obj/item/ammo_box/magazine/smgm45stun,
-/obj/item/ammo_box/magazine/smgm45stun,
-/obj/item/ammo_box/magazine/smgm45stun,
-/obj/item/ammo_box/magazine/smgm45stun,
-/obj/item/ammo_box/magazine/smgm45stun,
-/obj/item/ammo_box/magazine/smgm45stun,
-/obj/item/ammo_box/magazine/smgm45stun,
-/obj/item/ammo_box/magazine/smgm45stun,
-/obj/item/ammo_box/magazine/smgm45stun,
-/obj/item/ammo_box/magazine/smgm45stun,
 /obj/item/ammo_box/magazine/smgm45stun,
 /obj/item/ammo_box/magazine/smgm45stun,
 /obj/item/ammo_box/magazine/smgm45stun,
@@ -7937,6 +7877,7 @@
 	pixel_y = 23
 	},
 /obj/structure/closet/secure_closet/blueshield,
+/obj/item/implant/uplink,
 /turf/open/floor/mineral/plastitanium,
 /area/command/blueshielquarters)
 "arU" = (
@@ -22055,8 +21996,6 @@
 /obj/item/folder/blue,
 /obj/item/stamp/captain,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/obj/item/uplink,
-/obj/item/stack/telecrystal/twenty,
 /turf/open/floor/mineral/plastitanium,
 /area/command/heads_quarters/captain)
 "bfC" = (
@@ -26015,6 +25954,7 @@
 	dir = 4
 	},
 /obj/item/clothing/under/rank/captain/parade,
+/obj/item/implant/uplink,
 /turf/open/floor/carpet/black,
 /area/command/heads_quarters/captain)
 "bpl" = (
@@ -28888,6 +28828,8 @@
 	dir = 8
 	},
 /obj/item/clothing/suit/ianshirt,
+/obj/item/implant/uplink,
+/obj/item/stack/telecrystal/twenty,
 /turf/open/floor/mineral/plastitanium,
 /area/command/heads_quarters/hop)
 "bwj" = (
@@ -28899,8 +28841,6 @@
 "bwk" = (
 /obj/structure/table,
 /obj/machinery/recharger,
-/obj/item/uplink,
-/obj/item/stack/telecrystal/twenty,
 /turf/open/floor/mineral/plastitanium,
 /area/command/heads_quarters/hop)
 "bwl" = (
@@ -29733,8 +29673,6 @@
 /obj/effect/turf_decal/tile/brown{
 	dir = 8
 	},
-/obj/item/uplink,
-/obj/item/stack/telecrystal/twenty,
 /turf/open/floor/mineral/plastitanium,
 /area/cargo/qm)
 "bym" = (
@@ -29777,8 +29715,6 @@
 	pixel_y = 5;
 	req_access_txt = "47"
 	},
-/obj/item/uplink,
-/obj/item/stack/telecrystal/twenty,
 /turf/open/floor/mineral/plastitanium,
 /area/command/heads_quarters/rd)
 "byp" = (
@@ -29909,6 +29845,8 @@
 /obj/effect/turf_decal/tile/brown{
 	dir = 4
 	},
+/obj/item/implant/uplink,
+/obj/item/stack/telecrystal/twenty,
 /turf/open/floor/mineral/plastitanium,
 /area/cargo/qm)
 "byE" = (
@@ -31563,6 +31501,8 @@
 /area/command/heads_quarters/rd)
 "bCj" = (
 /obj/structure/closet/secure_closet/RD,
+/obj/item/implant/uplink,
+/obj/item/stack/telecrystal/twenty,
 /turf/open/floor/mineral/plastitanium,
 /area/command/heads_quarters/rd)
 "bCk" = (
@@ -32393,8 +32333,6 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
 	},
-/obj/item/uplink,
-/obj/item/stack/telecrystal/twenty,
 /turf/open/floor/mineral/plastitanium,
 /area/command/heads_quarters/cmo)
 "bEl" = (
@@ -34259,6 +34197,8 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
 	},
+/obj/item/implant/uplink,
+/obj/item/stack/telecrystal/twenty,
 /turf/open/floor/mineral/plastitanium,
 /area/command/heads_quarters/cmo)
 "bIx" = (
@@ -41384,6 +41324,8 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
+/obj/item/stack/telecrystal/twenty,
+/obj/item/implant/uplink,
 /turf/open/floor/mineral/plastitanium,
 /area/command/heads_quarters/ce)
 "cbq" = (
@@ -44007,8 +43949,6 @@
 /obj/structure/disposalpipe/segment,
 /obj/effect/landmark/event_spawn,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/obj/item/uplink,
-/obj/item/stack/telecrystal/twenty,
 /turf/open/floor/mineral/plastitanium,
 /area/command/heads_quarters/ce)
 "ciq" = (
