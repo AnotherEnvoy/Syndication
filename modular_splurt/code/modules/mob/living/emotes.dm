@@ -763,6 +763,14 @@
 	emote_sound = 'modular_splurt/sound/voice/yap.ogg'
 	emote_cooldown = 0.28 SECONDS
 
+/datum/emote/living/audio/yip
+	key = "yip"
+	key_third_person = "yips"
+	message = "yips!"
+	message_mime = "acts out a yip!"
+	emote_sound = 'modular_splurt/sound/voice/yip.ogg'
+	emote_cooldown = 0.2 SECONDS
+
 /datum/emote/living/audio/bork
 	key = "bork"
 	key_third_person = "borks"
@@ -1199,3 +1207,92 @@
 	emote_sound = 'modular_splurt/sound/voice/gachi/wepons.ogg'
 	emote_cooldown = 1.07 SECONDS
 	emote_volume = 10
+
+/datum/emote/living/audio/sciteam
+	key = "sciteam"
+	key_third_person = "sciteams"
+	message = "exclaims, \"I am with the <b>Science</b> team!\""
+	message_mime = "gestures being with the Science team!"
+	emote_sound = 'modular_splurt/sound/voice/sciteam.ogg'
+	emote_cooldown = 1.32 SECONDS
+	emote_volume = 90
+
+/datum/emote/living/audio/ambatukam
+	key = "ambatukam"
+	key_third_person = "ambatukams"
+	message = "is about to come!"
+	message_mime = "seems like about to come!"
+	emote_sound = 'modular_splurt/sound/voice/ambatukam.ogg'
+	emote_cooldown = 2.75 SECONDS
+	//emote_volume = 30
+
+/datum/emote/living/audio/ambatukam2
+	key = "ambatukam2"
+	key_third_person = "ambatukams2"
+	message = "is about to come in harmony!"
+	message_mime = "seems like about to come in harmony!"
+	emote_sound = 'modular_splurt/sound/voice/ambatukam_harmony.ogg'
+	emote_cooldown = 3.42 SECONDS
+	//emote_volume = 60
+
+/datum/emote/living/audio/eekum
+	key = "eekumbokum"
+	key_third_person = "eekumbokums"
+	message = "eekum-bokums!"
+	message_mime = "seem to eekum-bokum!"
+	emote_sound = 'modular_splurt/sound/voice/eekum-bokum.ogg'
+	emote_cooldown = 0.9 SECONDS // Uses longest sound's time.
+
+/datum/emote/living/audio/eekum/run_emote(mob/user, params)
+	switch(user.gender)
+		if(MALE) // Game's SFX
+			emote_sound = 'modular_splurt/sound/voice/eekum-bokum.ogg'
+		if(FEMALE) // Korone's
+			emote_sound = pick('modular_splurt/sound/voice/eekum-bokum_f1.ogg', 'modular_splurt/sound/voice/eekum-bokum_f2.ogg')
+		else // Both
+			emote_sound = pick('modular_splurt/sound/voice/eekum-bokum.ogg', 'modular_splurt/sound/voice/eekum-bokum_f1.ogg', 'modular_splurt/sound/voice/eekum-bokum_f2.ogg')
+	. = ..()
+
+/datum/emote/living/audio/bazinga
+	key = "bazinga"
+	key_third_person = "bazingas"
+	message = "exclaims, \"<i>Bazinga!</i>\""
+	message_mime = "fools someone, silently."
+	emote_sound = 'modular_splurt/sound/voice/bazinga.ogg'
+	emote_cooldown = 0.65 SECONDS
+
+/datum/emote/living/audio/bazinga/run_emote(mob/user, params)
+	if(prob(1)) // If Empah had TTS #25
+		emote_sound = 'modular_splurt/sound/voice/bazinga_ebil.ogg'
+		emote_pitch_variance = FALSE
+		emote_cooldown = 1.92 SECONDS
+		emote_volume = 110
+	else
+		emote_sound = 'modular_splurt/sound/voice/bazinga.ogg'
+		emote_pitch_variance = TRUE
+		emote_cooldown = 0.65 SECONDS
+		emote_volume = 50
+	. = ..()
+
+/datum/emote/living/audio/yooo
+	key = "yooo"
+	key_third_person = "yooos"
+	message = "thinks they are part of Kabuki play."
+	emote_sound = 'modular_splurt/sound/voice/yooo.ogg'
+	emote_cooldown = 2.54 SECONDS
+
+/datum/emote/living/audio/buzzer_correct
+	key = "correct"
+	key_third_person = "corrects"
+	message = "thinks someone is correct."
+	message_param = "thinks %t is correct."
+	emote_sound = 'modular_splurt/sound/voice/buzzer_correct.ogg'
+	emote_cooldown = 0.84 SECONDS
+
+/datum/emote/living/audio/buzzer_incorrect
+	key = "incorrect"
+	key_third_person = "incorrects"
+	message = "thinks someone is incorrect."
+	message_param = "thinks %t is incorrect."
+	emote_sound = 'modular_splurt/sound/voice/buzzer_incorrect.ogg'
+	emote_cooldown = 1.21 SECONDS
