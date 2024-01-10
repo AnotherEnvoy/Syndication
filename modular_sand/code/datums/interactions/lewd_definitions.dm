@@ -330,7 +330,7 @@
 							message = "cums on \the <b>[partner]</b>'s face."
 					if(CUM_TARGET_VAGINA)
 						var/has_vagina = partner.has_vagina()
-							if(has_vagina == TRUE || has_vagina == HAS_EXPOSED_GENITAL)
+						if(has_vagina == TRUE || has_vagina == HAS_EXPOSED_GENITAL)
 							if(partner_carbon_check)
 								target_gen = c_partner.getorganslot(ORGAN_SLOT_VAGINA)
 							message = "cums in \the <b>[partner]</b>'s pussy."
@@ -451,7 +451,7 @@
 								message = "squirts on the floor!"
 						else
 							if(partner.has_feet())
-								message = "squirts on \the <b>[partner]</b>'s [last_lewd_datum.require_target_feet == 1 ? pick("foot", "sole") : pick("feet", "soles")]."
+								message = "squirts on \the <b>[partner]</b>'s [last_lewd_datum.require_target_num_feet == 1 ? pick("foot", "sole") : pick("feet", "soles")]."
 							else
 								message = "squirts on the floor!"
 					//weird shit goes here
