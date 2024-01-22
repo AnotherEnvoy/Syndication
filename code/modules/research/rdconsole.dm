@@ -47,7 +47,7 @@ Nothing else in the console has ID requirements.
 		nodedata["design_ids"] = node.design_ids
 		nodedata["unlock_ids"] = node.unlock_ids
 		nodedata["category"] = node.category
-		nodedata["cost"] = node.research_costs
+		nodedata["cost"] = node.get_price(stored_research)
 		nodes[id] = nodedata
 	data["nodes"] = nodes
 	var/list/designs = list()
