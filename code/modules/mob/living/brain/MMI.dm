@@ -32,7 +32,7 @@
 	else
 		. += "mmi_dead"
 
-/obj/item/mmi/Initialize()
+/obj/item/mmi/Initialize(mapload)
 	. = ..()
 	radio = new(src) //Spawns a radio inside the MMI.
 	radio.broadcasting = 0 //researching radio mmis turned the robofabs into radios because this didnt start as 0.
@@ -185,11 +185,20 @@
 		brainmob.emote("alarm")
 
 /obj/item/mmi/Destroy()
-	mecha = null
-	QDEL_NULL(brainmob)
-	QDEL_NULL(brain)
-	QDEL_NULL(radio)
-	QDEL_NULL(laws)
+	if(iscyborg(loc))
+		var/mob/living/silicon/robot/borg = loc
+		borg.mmi = null
+	if(brainmob)
+		qdel(brainmob)
+		brainmob = null
+	if(brain)
+		qdel(brain)
+		brain = null
+	if(mecha)
+		mecha = null
+	if(radio)
+		qdel(radio)
+		radio = null
 	return ..()
 
 /obj/item/mmi/deconstruct(disassembled = TRUE)

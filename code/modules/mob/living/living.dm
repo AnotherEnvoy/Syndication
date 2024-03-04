@@ -39,7 +39,6 @@
 
 	remove_from_all_data_huds()
 	GLOB.mob_living_list -= src
-	GLOB.ssd_mob_list -= src
 	QDEL_LIST(diseases)
 	return ..()
 

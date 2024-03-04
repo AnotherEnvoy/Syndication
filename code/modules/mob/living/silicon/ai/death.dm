@@ -6,9 +6,6 @@
 		// Will update all AI status displays with a blue screen of death
 		INVOKE_ASYNC(src, .proc/emote, "bsod")
 
-	if(!isnull(deployed_shell))
-		disconnect_shell()
-
 	. = ..()
 
 	var/old_icon = icon_state
@@ -21,14 +18,8 @@
 
 	cameraFollow = null
 
-	if(is_anchored)
-		flip_anchored()
-
-	//Citadel-Station Edit start
 	move_resist = MOVE_FORCE_NORMAL
 	update_mobility()
-	//Citadel-Station Edit end
-
 	if(eyeobj)
 		eyeobj.setLoc(get_turf(src))
 		set_eyeobj_visible(FALSE)
@@ -39,7 +30,8 @@
 	ShutOffDoomsdayDevice()
 
 	if(explosive)
-		addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(explosion), loc, 3, 6, 12, null, 15), 1 SECONDS)
+		spawn(10)
+			explosion(src.loc, 3, 6, 12, 15)
 
 	if(istype(loc, /obj/item/aicard/aitater))
 		loc.icon_state = "aitater-404"
@@ -47,8 +39,6 @@
 		loc.icon_state = "aispook-404"
 	else if(istype(loc, /obj/item/aicard))
 		loc.icon_state = "aicard-404"
-
-	SSblackbox.ReportDeath(src)
 
 /mob/living/silicon/ai/proc/ShutOffDoomsdayDevice()
 	if(nuking)

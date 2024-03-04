@@ -32,10 +32,8 @@
 		log_game("[src] ignored auto-cryo by being: In a VR sleeper.")
 		return
 
-	// Avoid adding deleted mobs to the list
-	if(!QDELETED(src))
-		// Add to SSD list
-		GLOB.ssd_mob_list |= src
+	// Add to SSD list
+	GLOB.ssd_mob_list |= src
 
 	// Log mob SSD status
 	log_game("[src] was added to the SSD list.")
