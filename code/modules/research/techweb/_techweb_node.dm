@@ -84,13 +84,12 @@
 
 /datum/techweb_node/proc/get_price(datum/techweb/host)
 	if(host)
-		var/list/actual_costs = research_costs * SSeconomy.techweb_price_multiplier
+		var/actual_cost = research_costs * SSeconomy.techweb_price_multiplier
 		if(host.boosted_nodes[id])
 			var/list/L = host.boosted_nodes[id]
 			for(var/i in L)
-				if(actual_costs[i])
-					actual_costs[i] -= L[i]
-		return actual_costs
+				actual_cost -= L[i]
+		return actual_cost
 	else
 		return research_costs * SSeconomy.techweb_price_multiplier
 
