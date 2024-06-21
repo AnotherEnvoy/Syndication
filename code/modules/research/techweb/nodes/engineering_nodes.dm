@@ -44,6 +44,14 @@
 	design_ids = list("smes", "super_cell", "hyper_cell", "super_capacitor", "superpacman", "mrspacman", "power_turbine", "power_turbine_console", "power_compressor", "circulator", "teg")
 	research_costs = 3000
 
+/datum/techweb_node/electrical_economy
+	id = "electrical_economy"
+	display_name = "Electrical Economy"
+	description = "Supercharge your economy with Engineering's wisdom."
+	prereq_ids = list("bluespace_power", "telecomms")
+	design_ids = list("etm")
+	research_costs = 7000
+
 /*
 /datum/techweb_node/basic_meteor_defense
 	id = "basic_meteor_defense"

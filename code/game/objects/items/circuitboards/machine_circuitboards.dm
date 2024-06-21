@@ -330,6 +330,17 @@
 		/obj/item/stock_parts/capacitor = 1)
 	def_components = list(/obj/item/stock_parts/cell = /obj/item/stock_parts/cell/high/empty)
 
+/obj/item/circuitboard/machine/etm
+	name = "ETM (Machine Board)"
+	icon_state = "engineering"
+	build_path = /obj/machinery/power/etm
+	req_components = list(
+		/obj/item/stack/cable_coil = 5,
+		/obj/item/stack/ore/bluespace_crystal = 1,
+		/obj/item/stock_parts/capacitor = 3,
+		/obj/item/stock_parts/subspace/transmitter = 1
+	)
+
 /obj/item/circuitboard/machine/techfab/department/engineering
 	name = "\improper Departmental Techfab (Machine Board) - Engineering"
 	build_path = /obj/machinery/rnd/production/techfab/department/engineering

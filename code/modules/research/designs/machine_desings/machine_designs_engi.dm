@@ -9,6 +9,14 @@
 	category = list ("Engineering Machinery")
 	departmental_flags = DEPARTMENTAL_FLAG_ENGINEERING
 
+/datum/design/board/etm
+	name = "Machine Design (ETM Board)"
+	desc = "The circuit board for an ETM"
+	id = "etm"
+	build_path = /obj/item/circuitboard/machine/etm
+	category = list("Engineering Machinery")
+	departmental_flags = DEPARTMENTAL_FLAG_ENGINEERING
+
 /datum/design/board/circulator
 	name = "Machine Design (Circulator Board)"
 	desc = "The circuit board for a circulator."
